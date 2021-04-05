@@ -1,9 +1,11 @@
-import './global.css'
+// Global
+import './global.css';
+import Routes from './routes'
 
 function App() {
   return (
     <div className="App">
-      <h1>GOH</h1>
+      <Routes />
     </div>
   );
 }
