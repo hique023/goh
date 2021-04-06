@@ -9,6 +9,7 @@ import { FiArrowLeft } from 'react-icons/fi'
 import './styles.css'
 
 export default function Register() {
+    const history = useHistory()
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -29,6 +30,8 @@ export default function Register() {
         setEmail('')
         setPassword('')
         setGroup('')
+
+        history.push('/home')
     }
 
     function imageHandler(e) {
