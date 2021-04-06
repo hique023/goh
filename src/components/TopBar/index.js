@@ -1,5 +1,6 @@
 // Global
 import react from 'react'
+import { Link } from 'react-router-dom'
 
 // Assets
 import './styles.css'
@@ -10,7 +11,9 @@ export default function TopBar() {
         <div className="containerBar">
             <div className="contentBar">
                 <h1>Olá, Pedro!</h1>
-                <AiOutlineLogout size={30} color="#FF7989" />
+                <Link to="/">
+                    <AiOutlineLogout size={30} color="#FF7989" />
+                </Link>
             </div>
         </div>
     )

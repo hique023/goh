@@ -1,0 +1,10 @@
+.containerListPhases {
+  background-color: #e2e2e2;
+  padding: 40px;
+  border-radius: 10px;
+  width: 85%;
+  position: fixed;
+  top: 180px;
+  right: 30px;
+  height: 70%;
+}
