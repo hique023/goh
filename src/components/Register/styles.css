@@ -43,6 +43,16 @@
   max-width: 450px;
 }
 
+.register-container .content form .boxImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container .content form .inputImage {
+  display: none;
+}
+
 .register-container .content form .imgProfile {
   border-radius: 50%;
   background-color: #333;

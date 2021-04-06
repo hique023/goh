@@ -36,7 +36,6 @@ export default function Register() {
         reader.onload = (e) => {
             if (reader.readyState === 2) {
                 setProfileImg(e.target.result)
-                // console.log({ profileImg: reader.result })
             }
         }
         reader.readAsDataURL(e.target.files[0])
@@ -58,28 +57,24 @@ export default function Register() {
                 </section>
                 <form onSubmit={handleRegister}>
 
-                    <img
-                        className="imgProfile"
-                        src={profileImg}
-                        alt=""
-                        id="img"
-                    />
-                    <input type="file" accept="image/*" name="image-upload" id="input" onChange={imageHandler} />
+                    <label htmlFor="imageUpload" className="boxImage">
 
-                    {/* <div className="label">
-                        <label className="image-upload" htmlFor="input">
-                            Choose your Photo
-					    </label>
-                    </div> */}
+                        <img
+                            className="imgProfile"
+                            src={profileImg}
+                            alt="Imagem de Perfil"
+                        />
 
-                    {/* <input className="photoProfile"
-                        type="file"
-                        name="photo"
-                        id="photo"
-                        accept="image/png, image/jpeg"
-                        value={name}
-                    // onChange={e => setName(e.target.value)}
-                    /> */}
+                        <input
+                            className="inputImage"
+                            type="file"
+                            accept="image/*"
+                            name="image-upload"
+                            id="imageUpload"
+                            onChange={imageHandler}
+                        />
+
+                    </label>
 
                     <input
                         placeholder="Nome"
