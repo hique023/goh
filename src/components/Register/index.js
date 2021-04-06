@@ -1,7 +1,117 @@
-import react from 'react'
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom'
+
+// Assets
+import register from '../../assets/register.png'
+import { FiArrowLeft } from 'react-icons/fi'
+
+// Style
+import './styles.css'
 
 export default function Register() {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [group, setGroup] = useState('RC')
+    const [profileImg, setProfileImg] = useState('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png')
+
+    async function handleRegister(e) {
+        e.preventDefault()
+        console.log('Form enviado')
+        console.log(name)
+        console.log(email)
+        console.log(password)
+        console.log(group)
+
+        alert('Cadastro realizado com sucesso!')
+
+        setName('')
+        setEmail('')
+        setPassword('')
+        setGroup('')
+    }
+
+    function imageHandler(e) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            if (reader.readyState === 2) {
+                setProfileImg(e.target.result)
+                // console.log({ profileImg: reader.result })
+            }
+        }
+        reader.readAsDataURL(e.target.files[0])
+    };
+
     return (
-        <h1>Register</h1>
+        <div className="register-container">
+            <div className="content">
+                <section>
+                    {/* <img src={register} alt="Logo" /> */}
+
+                    <h1>Cadastro</h1>
+                    <p>Faça seu cadastro, entre na plataforma e aproveite o que temos a oferecer!</p>
+
+                    <Link className="back-link" to="/">
+                        <FiArrowLeft size={16} color="#e02041" />
+                        Já tenho cadastro
+                    </Link>
+                </section>
+                <form onSubmit={handleRegister}>
+
+                    <img
+                        className="imgProfile"
+                        src={profileImg}
+                        alt=""
+                        id="img"
+                    />
+                    <input type="file" accept="image/*" name="image-upload" id="input" onChange={imageHandler} />
+
+                    {/* <div className="label">
+                        <label className="image-upload" htmlFor="input">
+                            Choose your Photo
+					    </label>
+                    </div> */}
+
+                    {/* <input className="photoProfile"
+                        type="file"
+                        name="photo"
+                        id="photo"
+                        accept="image/png, image/jpeg"
+                        value={name}
+                    // onChange={e => setName(e.target.value)}
+                    /> */}
+
+                    <input
+                        placeholder="Nome"
+                        value={name}
+                        onChange={e => setName(e.target.value)}
+                    />
+
+                    <input
+                        type="email"
+                        placeholder="E-mail"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                    />
+
+                    <div className="input-group">
+                        <input
+                            placeholder="Senha"
+                            type="password"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                        />
+
+                        <select name="group" value={group} onChange={e => { setGroup(e.target.value) }}>
+                            <option value="rc">RC</option>
+                            <option value="fidelizacao">Fidelização</option>
+                            <option value="onboarding">Onboarding</option>
+                        </select>
+                    </div>
+
+                    <button className="button" type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
     )
 }
