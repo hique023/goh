@@ -1,0 +1,15 @@
+.containerBar {
+  background-color: bisque;
+  padding: 40px;
+  border-radius: 10px;
+  width: 80%;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+}
+
+.containerBar .contentBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
