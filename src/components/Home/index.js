@@ -11,7 +11,7 @@ export default function Home() {
         <div className="containerHome">
             <TopBar />
             <Sidebar />
-            <h1>Home</h1>
+            {/* <h1>Home</h1> */}
         </div>
     )
 }

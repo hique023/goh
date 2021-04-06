@@ -1,0 +1,8 @@
+.containerSidebar {
+  background-color: darkgoldenrod;
+  height: 100vh;
+  width: 180px;
+  left: -60px;
+  position: fixed;
+  border-radius: 20px;
+}

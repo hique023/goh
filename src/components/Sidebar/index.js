@@ -1,7 +1,13 @@
+// Global
 import react from 'react'
+
+// Assets
+import './styles.css'
 
 export default function Sidebar() {
     return (
-        <h1>Sidebar</h1>
+        <div className="containerSidebar">
+            <h1>Sidebar</h1>
+        </div>
     )
 }
