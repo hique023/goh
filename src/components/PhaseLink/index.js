@@ -1,9 +1,9 @@
 import react from 'react'
 import './styles.css'
 
-export default function Phase(props) {
+export default function PhaseLink(props) {
     return (
-        <div className="containerPhase">
+        <div className="containerPhaseLink">
             <h1>{props.name}</h1>
         </div>
     )

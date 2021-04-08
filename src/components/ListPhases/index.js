@@ -1,6 +1,6 @@
 // Global
 import react from 'react'
-import Phase from '../Phases'
+import PhaseLink from '../PhaseLink'
 
 // Asssets
 import './styles.css'
@@ -8,10 +8,10 @@ import './styles.css'
 export default function ListPhases() {
     return (
         <div className="containerListPhases">
-            <Phase name="Fase 1" />
-            <Phase name="Fase 2" />
-            <Phase name="Fase 3" />
-            <Phase name="Fase 4" />
+            <PhaseLink name="Fase 1" />
+            <PhaseLink name="Fase 2" />
+            <PhaseLink name="Fase 3" />
+            <PhaseLink name="Fase 4" />
         </div>
     )
 }
