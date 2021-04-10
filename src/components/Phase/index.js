@@ -19,11 +19,11 @@ export default function Phase() {
                     <Link className="back-link" to="/home">
                         <AiOutlineDoubleLeft size={30} color="#FF7989" />
                     </Link>
-                    <h1>Olá Pedro</h1>
+                    <h1>Olá Pedro!</h1>
                 </div>
                 <div className="rightTopBarPhase">
                     <Link className="back-link" to="/">
-                        <AiOutlineLogout size={30} color="#FF7989" />
+                        <AiOutlineLogout size={50} color="#FF7989" />
                     </Link>
                 </div>
             </div>
