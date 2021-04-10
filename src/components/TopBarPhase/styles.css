@@ -1,0 +1,17 @@
+.topBarPhase {
+  background-color: dodgerblue;
+  width: 100%;
+  height: 12vh;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: 10px; */
+}
+
+.topBarPhase .leftTopBarPhase {
+  display: flex;
+  align-items: center;
+}
