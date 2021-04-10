@@ -1,5 +1,5 @@
 // Global
-import react from 'react'
+import React from 'react'
 import PhaseLink from '../PhaseLink'
 
 // Asssets

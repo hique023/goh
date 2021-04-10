@@ -1,7 +1,10 @@
-import react from 'react'
+import React from 'react'
 
-export default function Phase(props) {
+export default function Phase() {
+
+    const phaseId = localStorage.getItem('phaseId')
+
     return (
-        <h1>{props.name}</h1>
+        <h1>{phaseId}</h1>
     )
 }
