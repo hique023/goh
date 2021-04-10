@@ -6,6 +6,7 @@ import Home from './components/Home'
 import NotFound from './components/NotFound'
 import Phase from './components/Phase'
 import Stage from './components/Stage'
+import Ranking from './components/Ranking'
 
 export default function Routes() {
     return (
@@ -16,6 +17,7 @@ export default function Routes() {
                 <Route exact path="/home" component={Home} />
                 <Route exact path="/phase" component={Phase} />
                 <Route exact path="/stage" component={Stage} />
+                <Route exact path="/ranking" component={Ranking} />
                 <Route component={NotFound} />
             </Switch>
         </BrowserRouter>

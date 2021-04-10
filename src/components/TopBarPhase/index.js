@@ -18,9 +18,7 @@ export default function TopBarPhase() {
         <div className="topBarPhase">
             <div className="leftTopBarPhase">
                 <button onClick={backLink} className="back-link">
-                    {/* <Link className="back-link" to="/home"> */}
                     <AiOutlineDoubleLeft size={30} color="#FF7989" />
-                    {/* </Link> */}
                 </button>
                 <h1>Olá Pedro!</h1>
             </div>
