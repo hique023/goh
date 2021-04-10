@@ -1,0 +1,54 @@
+.containerPhase {
+  /* display: flex; */
+  height: 100vh;
+  width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
+  background-color: rgb(255, 156, 209);
+}
+
+.containerPhase .topBarPhase {
+  background-color: dodgerblue;
+  width: 100%;
+  height: 12vh;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: 10px; */
+}
+
+.containerPhase .topBarPhase .leftTopBarPhase {
+  display: flex;
+  align-items: center;
+}
+
+.containerPhase .phaseBar {
+  background-color: goldenrod;
+  width: 100%;
+  height: 08vh;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.containerPhase .listStage {
+  background-color: green;
+  margin-top: 20px;
+  width: 100%;
+  height: 70vh;
+  border-radius: 10px;
+  overflow: hidden;
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}

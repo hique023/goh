@@ -14,7 +14,6 @@ export default function PhaseLink(props) {
         localStorage.setItem('phaseId', props.name)
     }
 
-
     return (
         <div className="containerPhaseLink">
             <button onClick={phaseGo}>{props.name}</button>
