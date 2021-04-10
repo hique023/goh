@@ -3,7 +3,7 @@
   height: 100%;
   width: 100%;
   border-radius: 10px;
-  padding: 10px;
+  /* padding: 10px; */
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -11,10 +11,36 @@
 }
 
 .containerStageLink .contentStageLink {
-  margin: 0 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerStageLink .contentStageLink button {
+  background-color: orange;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 10px;
+  padding: 20px;
+  outline: hidden;
+  border: none;
+  transform: opacity 0.2s;
+}
+
+.contentStageLink button:hover {
+  opacity: 80%;
+}
+
+.containerStageLink .contentStageLink button .leftStageLink {
+  display: flex;
+  align-items: center;
+}
+
+.containerStageLink .contentStageLink button .leftStageLink h1 {
+  margin-left: 30px;
 }
