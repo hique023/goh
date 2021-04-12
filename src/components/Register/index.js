@@ -45,70 +45,72 @@ export default function Register() {
     };
 
     return (
-        <div className="register-container">
-            <div className="content">
-                <section>
-                    {/* <img src={register} alt="Logo" /> */}
+        <div className="container">
+            <div className="register-container">
 
-                    <h1>Cadastro</h1>
-                    <p>Faça seu cadastro, entre na plataforma e aproveite o que temos a oferecer!</p>
+                <div className="content">
+                    <section>
 
-                    <Link className="back-link" to="/">
-                        <FiArrowLeft size={16} color="#e02041" />
-                        Já tenho cadastro
-                    </Link>
-                </section>
-                <form onSubmit={handleRegister}>
+                        <h1>Cadastro</h1>
+                        <p>Faça seu cadastro, entre na plataforma e aproveite o que temos a oferecer!</p>
 
-                    <label htmlFor="imageUpload" className="boxImage">
+                        <Link className="back-link" to="/">
+                            <FiArrowLeft size={16} color="#e02041" />
+                            Já tenho cadastro
+                        </Link>
+                    </section>
+                    <form onSubmit={handleRegister}>
 
-                        <img
-                            className="imgProfile"
-                            src={profileImg}
-                            alt="Imagem de Perfil"
+                        <label htmlFor="imageUpload" className="boxImage">
+
+                            <img
+                                className="imgProfile"
+                                src={profileImg}
+                                alt="Imagem de Perfil"
+                            />
+
+                            <input
+                                className="inputImage"
+                                type="file"
+                                accept="image/*"
+                                name="image-upload"
+                                id="imageUpload"
+                                onChange={imageHandler}
+                            />
+
+                        </label>
+
+                        <input
+                            placeholder="Nome"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
                         />
 
                         <input
-                            className="inputImage"
-                            type="file"
-                            accept="image/*"
-                            name="image-upload"
-                            id="imageUpload"
-                            onChange={imageHandler}
+                            type="email"
+                            placeholder="E-mail"
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
                         />
 
-                    </label>
+                        <div className="input-group">
+                            <input
+                                placeholder="Senha"
+                                type="password"
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
+                            />
 
-                    <input
-                        placeholder="Nome"
-                        value={name}
-                        onChange={e => setName(e.target.value)}
-                    />
+                            <select name="group" value={group} onChange={e => { setGroup(e.target.value) }}>
+                                <option value="rc">RC</option>
+                                <option value="fidelizacao">Fidelização</option>
+                                <option value="onboarding">Onboarding</option>
+                            </select>
+                        </div>
 
-                    <input
-                        type="email"
-                        placeholder="E-mail"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                    />
-
-                    <div className="input-group">
-                        <input
-                            placeholder="Senha"
-                            type="password"
-                            value={password}
-                            onChange={e => setPassword(e.target.value)}
-                        />
-
-                        <select name="group" value={group} onChange={e => { setGroup(e.target.value) }}>
-                            <option value="rc">RC</option>
-                            <option value="fidelizacao">Fidelização</option>
-                            <option value="onboarding">Onboarding</option>
-                        </select>
-                    </div>
-
-                    <button className="button" type="submit">Cadastrar</button>
-                </form>
+                        <button className="button" type="submit">Cadastrar</button>
+                    </form>
+                </div>
             </div>
         </div>
     )

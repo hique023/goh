@@ -7,8 +7,6 @@ import './styles.css'
 
 // Assets
 // import login from '../../assets/login.png'
-import idvisual from '../../assets/idvisual.png'
-import idvisualnovo from '../../assets/idvisualnovo.png'
 
 export default function Logon() {
     const [email, setEmail] = useState('')
@@ -22,7 +20,7 @@ export default function Logon() {
     }
 
     return (
-        <div className="container">
+        <div className="container-master">
             <div className="logon-container">
 
                 <section className="form">

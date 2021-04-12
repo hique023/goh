@@ -1,3 +1,9 @@
+.container {
+  background-image: url("../../assets/backgroundregister.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .register-container {
   width: 100%;
   max-width: 1120px;
@@ -24,6 +30,10 @@
 .register-container .content section {
   width: 100%;
   max-width: 380px;
+}
+
+.register-container .content section .back-link {
+  color: var(--black);
 }
 
 .register-container .content section h1 {
