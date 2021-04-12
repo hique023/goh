@@ -20,7 +20,10 @@ export default function PhaseLink(props) {
 
     return (
         <div className="containerPhaseLink">
-            <button onClick={phaseGo} style={cardStyle}>{props.name}</button>
+            {/* <button onClick={phaseGo} style={cardStyle}>{props.name}</button> */}
+            <button onClick={phaseGo} style={cardStyle}>
+                <img src={props.url} alt="Phase" />
+            </button>
         </div>
     )
 }

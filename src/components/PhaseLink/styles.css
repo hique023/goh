@@ -16,3 +16,7 @@
 .containerPhaseLink button:hover {
   opacity: 80%;
 }
+
+.containerPhaseLink button img {
+  width: 20vh;
+}
