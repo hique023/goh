@@ -1,8 +1,45 @@
 .containerSidebar {
   background-color: darkgoldenrod;
   height: 100vh;
-  width: 180px;
-  left: -60px;
+  width: 200px;
+  left: -90px;
   position: fixed;
   border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.containerSidebar .contentSidebar {
+  background-color: tomato;
+  height: 100vh;
+  width: 110px;
+  left: 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerSidebar .contentSidebar .svgSelect {
+  padding: 10px;
+  background-color: #6d6d6d8e;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+
+.containerSidebar .contentSidebar .svgSelect:hover {
+  padding: 10px;
+  background-color: #6d6d6d00;
+  border-radius: 10px;
+}
+
+.containerSidebar .contentSidebar svg {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+.containerSidebar .contentSidebar svg:hover {
+  background-color: #6d6d6d8e;
 }
