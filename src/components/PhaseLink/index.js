@@ -9,6 +9,10 @@ export default function PhaseLink(props) {
 
     const history = useHistory()
 
+    const cardStyle = {
+        backgroundColor: props.color || '#FFF'
+    }
+
     function phaseGo() {
         history.push('/phase')
         localStorage.setItem('phaseId', props.name)
@@ -16,7 +20,7 @@ export default function PhaseLink(props) {
 
     return (
         <div className="containerPhaseLink">
-            <button onClick={phaseGo}>{props.name}</button>
+            <button onClick={phaseGo} style={cardStyle}>{props.name}</button>
         </div>
     )
 }
