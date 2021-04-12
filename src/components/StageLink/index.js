@@ -19,7 +19,7 @@ export default function StageLink(props) {
             <div className="contentStageLink">
                 <button onClick={goStage}>
                     <div className="leftStageLink">
-                        <BiChalkboard size={80} color="#e02041" />
+                        <BiChalkboard size={80} color="black" />
                         <h1>{props.name}</h1>
                     </div>
                     <h1>400 xp</h1>

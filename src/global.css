@@ -17,11 +17,12 @@
   --green-soft: #5bb13d;
   --green: #018037;
   --white: #fff;
+  --background: #f0f0f5;
 }
 
 body {
   font: 400 14px Roboto, sans-serif;
-  background: #f0f0f5;
+  background: var(--background);
   -webkit-font-smoothing: antialiased;
 }
 

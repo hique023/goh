@@ -18,13 +18,13 @@ export default function TopBarPhase() {
         <div className="topBarPhase">
             <div className="leftTopBarPhase">
                 <button onClick={backLink} className="back-link">
-                    <AiOutlineDoubleLeft size={30} color="#FF7989" />
+                    <AiOutlineDoubleLeft size={30} color="black" />
                 </button>
                 <h1>Olá Pedro!</h1>
             </div>
             <div className="rightTopBarPhase">
                 <Link className="back-link" to="/">
-                    <AiOutlineLogout size={50} color="#FF7989" />
+                    <AiOutlineLogout size={50} color="black" />
                 </Link>
             </div>
         </div>

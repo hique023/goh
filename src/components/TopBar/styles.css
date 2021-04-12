@@ -1,5 +1,5 @@
 .containerBar {
-  background-color: bisque;
+  background-color: var(--red);
   padding: 40px;
   border-radius: 10px;
   width: 85%;
@@ -12,4 +12,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--white);
 }
