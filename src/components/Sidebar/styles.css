@@ -20,6 +20,10 @@
   flex-direction: column;
 }
 
+.containerSidebar .contentSidebar .logoSidebar {
+  background-color: white;
+}
+
 .containerSidebar .contentSidebar .svgSelect {
   padding: 10px;
   background-color: #6d6d6d8e;

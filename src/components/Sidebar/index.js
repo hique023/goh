@@ -11,7 +11,9 @@ export default function Sidebar() {
     return (
         <div className="containerSidebar">
             <div className="contentSidebar">
-                <h1>Content Sidebar</h1>
+                <div className="logoSidebar">
+                    <h1>Content Sidebar</h1>
+                </div>
                 <Link to="/home">
                     <ImHome className="svgSelect" size={60} color="black" />
                 </Link>
