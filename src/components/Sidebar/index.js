@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 // Assets
 import './styles.css'
+import logo from '../../assets/logo.png'
 import { ImHome } from "react-icons/im";
 import { GiPodium } from "react-icons/gi";
 
@@ -12,7 +13,7 @@ export default function Sidebar() {
         <div className="containerSidebar">
             <div className="contentSidebar">
                 <div className="logoSidebar">
-                    <h1>Content Sidebar</h1>
+                    <img src={logo} alt="Logo" />
                 </div>
                 <Link to="/home">
                     <ImHome className="svgSelect" size={60} color="black" />
