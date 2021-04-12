@@ -6,7 +6,9 @@ import { FiLogIn } from 'react-icons/fi'
 import './styles.css'
 
 // Assets
-import login from '../../assets/login.png'
+// import login from '../../assets/login.png'
+import idvisual from '../../assets/idvisual.png'
+import idvisualnovo from '../../assets/idvisualnovo.png'
 
 export default function Logon() {
     const [email, setEmail] = useState('')
@@ -20,34 +22,36 @@ export default function Logon() {
     }
 
     return (
-        <div className="logon-container">
-            <section className="form">
+        <div className="container">
+            <div className="logon-container">
 
-                <form onSubmit={handleLogin}>
-                    <h1>Faça seu login</h1>
+                <section className="form">
 
-                    <input
-                        placeholder='E-mail'
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                    />
+                    <form onSubmit={handleLogin}>
+                        {/* <h1>Faça seu login</h1> */}
 
-                    <input
-                        placeholder='Senha'
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                    />
+                        <input
+                            placeholder='E-mail'
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                        />
 
-                    <button className="button" type='submit'>Entrar</button>
+                        <input
+                            placeholder='Senha'
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                        />
 
-                    <Link className="back-link" to="/register">
-                        <FiLogIn size={16} color="#e02041" />
-                        Não tenho cadastro
-                    </Link>
-                </form>
+                        <button className="button" type='submit'>Entrar</button>
 
-            </section>
-            <img src={login} alt="Heroes" />
+                        <Link className="back-link" to="/register">
+                            <FiLogIn size={16} color="white" />
+                            Não tenho cadastro
+                        </Link>
+                    </form>
+
+                </section>
+            </div>
         </div>
     )
 }
