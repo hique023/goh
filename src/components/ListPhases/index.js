@@ -12,10 +12,10 @@ import phase4 from '../../assets/phase4.png'
 export default function ListPhases() {
     return (
         <div className="containerListPhases">
-            <PhaseLink name="Fase 1" url={phase1} color="var(--blue)" />
-            <PhaseLink name="Fase 2" url={phase2} color="var(--yellow)" />
-            <PhaseLink name="Fase 3" url={phase3} color="var(--wine)" />
-            <PhaseLink name="Fase 4" url={phase4} color="var(--green)" />
+            <PhaseLink name="01" url={phase1} color="var(--blue)" />
+            <PhaseLink name="02" url={phase2} color="var(--yellow)" />
+            <PhaseLink name="03" url={phase3} color="var(--wine)" />
+            <PhaseLink name="04" url={phase4} color="var(--green)" />
         </div>
     )
 }

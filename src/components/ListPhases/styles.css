@@ -1,6 +1,6 @@
 .containerListPhases {
-  background-color: #e2e2e2;
-  padding: 40px;
+  background-color: var(--background);
+  padding: 0px;
   border-radius: 10px;
   width: 85%;
   position: fixed;
