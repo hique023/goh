@@ -1,0 +1,22 @@
+.containerListRanking {
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-between;
+  height: 12vh;
+  width: 100%;
+  border-radius: 10px;
+  align-items: center;
+  padding: 20px 30px;
+  margin-top: 10px;
+}
+
+.containerListRanking .containerListRankingLeft {
+  display: flex;
+  align-items: center;
+}
+
+.containerListRanking .containerListRankingLeft img {
+  height: 8vh;
+  border-radius: 20%;
+  margin-right: 20px;
+}
