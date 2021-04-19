@@ -14,3 +14,7 @@
   align-items: center;
   color: var(--white);
 }
+
+.containerBar .contentBar h1 {
+  font-size: xx-large;
+}
