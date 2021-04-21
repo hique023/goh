@@ -6,11 +6,16 @@ import TopBar from '../TopBarPhase'
 import './styles.css'
 
 export default function Phase() {
+
+    const color = localStorage.getItem('color')
+
     return (
         <div className="containerStage">
-            <TopBar />
+            <TopBar name="Olá, Pedro!" color={color} />
 
-            Questões
+            <div className="timerStage">
+                <h1>02:00</h1>
+            </div>
         </div>
     )
 }

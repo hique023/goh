@@ -7,3 +7,14 @@
   justify-content: center;
   background-color: rgb(255, 156, 209);
 }
+
+.containerStage .timerStage {
+  background-color: var(--white);
+  height: 06vh;
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 05px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
