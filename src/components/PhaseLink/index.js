@@ -16,6 +16,7 @@ export default function PhaseLink(props) {
     function phaseGo() {
         history.push('/phase')
         localStorage.setItem('phaseId', props.name)
+        localStorage.setItem('color', props.color)
     }
 
     return (

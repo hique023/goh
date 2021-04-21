@@ -10,7 +10,7 @@ export default function Ranking() {
     return (
         <div className="containerRanking">
 
-            <TopBar />
+            <TopBar name="Ranking" />
 
             <div className="containerRankingSelect">
                 <select name="phase">

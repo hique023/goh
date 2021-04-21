@@ -12,7 +12,7 @@ export default function TopBar() {
             <div className="contentBar">
                 <h1>Olá, Pedro!</h1>
                 <Link className="back-link" to="/">
-                    <AiOutlineLogout size={30} color="black" />
+                    <AiOutlineLogout size={50} color="white" />
                 </Link>
             </div>
         </div>
