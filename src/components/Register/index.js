@@ -1,8 +1,9 @@
+// Global
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom'
+import firebase from '../../firebaseConfig.js'
 
 // Assets
-import register from '../../assets/register.png'
 import { FiArrowLeft } from 'react-icons/fi'
 
 // Style
@@ -18,20 +19,31 @@ export default function Register() {
 
     async function handleRegister(e) {
         e.preventDefault()
-        console.log('Form enviado')
-        console.log(name)
-        console.log(email)
-        console.log(password)
-        console.log(group)
 
-        alert('Cadastro realizado com sucesso!')
-
-        setName('')
-        setEmail('')
-        setPassword('')
-        setGroup('')
-
-        history.push('/home')
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then((user) => {
+                alert('Cadastro com sucesso!')
+                // localStorage.setItem('firstName', name)
+                // localStorage.setItem('lastName', lastname)
+                // localStorage.setItem('email', email)
+                // localStorage.setItem('activeSession', true)
+                // localStorage.setItem('isLogged', true)
+                console.log('Form enviado')
+                console.log(name)
+                console.log(email)
+                console.log(password)
+                console.log(group)
+                setName('')
+                setEmail('')
+                setPassword('')
+                setGroup('')
+                history.push('/home')
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                alert(errorMessage)
+            });
     }
 
     function imageHandler(e) {
