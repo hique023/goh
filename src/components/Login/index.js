@@ -1,6 +1,8 @@
+// Global
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { FiLogIn } from 'react-icons/fi'
+import firebase from '../../firebaseConfig'
 
 // CSS
 import './styles.css'
@@ -16,7 +18,18 @@ export default function Logon() {
 
     async function handleLogin(e) {
         e.preventDefault()
-        history.push('/home')
+
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then((user) => {
+                localStorage.setItem('isLogged', true)
+                history.push('/home')
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                setPassword('')
+                var errorMessage = error.message;
+                alert(errorMessage)
+            });
     }
 
     return (
@@ -36,6 +49,7 @@ export default function Logon() {
 
                         <input
                             placeholder='Senha'
+                            type='password'
                             value={password}
                             onChange={e => setPassword(e.target.value)}
                         />
