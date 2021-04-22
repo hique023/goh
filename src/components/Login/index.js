@@ -19,17 +19,23 @@ export default function Logon() {
     async function handleLogin(e) {
         e.preventDefault()
 
-        firebase.auth().signInWithEmailAndPassword(email, password)
-            .then((user) => {
-                localStorage.setItem('isLogged', true)
-                history.push('/home')
-            })
-            .catch((error) => {
-                var errorCode = error.code;
-                setPassword('')
-                var errorMessage = error.message;
-                alert(errorMessage)
-            });
+        if (email.indexOf('cappta.com.br') === 0) {
+            console.log('Email válido')
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((user) => {
+                    localStorage.setItem('isLogged', true)
+                    history.push('/home')
+                })
+                .catch((error) => {
+                    var errorCode = error.code;
+                    setPassword('')
+                    var errorMessage = error.message;
+                    alert(errorMessage)
+                });
+        } else {
+            alert('Insira seu email corporativo')
+        }
+
     }
 
     return (
