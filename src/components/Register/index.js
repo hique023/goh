@@ -16,34 +16,43 @@ export default function Register() {
     const [password, setPassword] = useState('')
     const [group, setGroup] = useState('RC')
     const [profileImg, setProfileImg] = useState('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png')
+    const dominio = email.split('@')
+    const dominioValidator = 'cappta.com.br'
 
     async function handleRegister(e) {
         e.preventDefault()
 
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-            .then((user) => {
-                alert('Cadastro com sucesso!')
-                // localStorage.setItem('firstName', name)
-                // localStorage.setItem('lastName', lastname)
-                // localStorage.setItem('email', email)
-                // localStorage.setItem('activeSession', true)
-                // localStorage.setItem('isLogged', true)
-                console.log('Form enviado')
-                console.log(name)
-                console.log(email)
-                console.log(password)
-                console.log(group)
-                setName('')
-                setEmail('')
-                setPassword('')
-                setGroup('')
-                history.push('/home')
-            })
-            .catch((error) => {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                alert(errorMessage)
-            });
+        if (dominio[1] === dominioValidator) {
+            console.log('Email válido')
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then((user) => {
+                    alert('Cadastro com sucesso!')
+                    // localStorage.setItem('firstName', name)
+                    // localStorage.setItem('lastName', lastname)
+                    // localStorage.setItem('email', email)
+                    // localStorage.setItem('activeSession', true)
+                    // localStorage.setItem('isLogged', true)
+                    console.log('Form enviado')
+                    console.log(name)
+                    console.log(email)
+                    console.log(password)
+                    console.log(group)
+                    setName('')
+                    setEmail('')
+                    setPassword('')
+                    setGroup('')
+                    history.push('/home')
+                })
+                .catch((error) => {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    alert(errorMessage)
+                });
+        } else {
+            alert('Insira seu email corporativo')
+            setEmail('')
+        }
+
     }
 
     function imageHandler(e) {

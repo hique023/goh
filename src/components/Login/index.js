@@ -13,13 +13,15 @@ import './styles.css'
 export default function Logon() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const dominio = email.split('@')
+    const dominioValidator = 'cappta.com.br'
 
     const history = useHistory()
 
     async function handleLogin(e) {
         e.preventDefault()
 
-        if (email.indexOf('cappta.com.br') === 0) {
+        if (dominio[1] === dominioValidator) {
             console.log('Email válido')
             firebase.auth().signInWithEmailAndPassword(email, password)
                 .then((user) => {
