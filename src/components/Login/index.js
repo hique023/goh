@@ -1,5 +1,5 @@
 // Global
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { FiLogIn } from 'react-icons/fi'
 import firebase from '../../firebaseConfig'
@@ -17,6 +17,10 @@ export default function Logon() {
     const dominioValidator = 'cappta.com.br'
 
     const history = useHistory()
+
+    useEffect(() => {
+        setEmail(localStorage.getItem('email'))
+    }, [])
 
     async function handleLogin(e) {
         e.preventDefault()

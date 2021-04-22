@@ -29,7 +29,7 @@ export default function Register() {
                     alert('Cadastro com sucesso!')
                     // localStorage.setItem('firstName', name)
                     // localStorage.setItem('lastName', lastname)
-                    // localStorage.setItem('email', email)
+                    localStorage.setItem('email', email)
                     // localStorage.setItem('activeSession', true)
                     // localStorage.setItem('isLogged', true)
                     console.log('Form enviado')
