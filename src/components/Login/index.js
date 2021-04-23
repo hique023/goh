@@ -28,7 +28,9 @@ export default function Logon() {
         if (dominio[1] === dominioValidator) {
             console.log('Email válido')
             firebase.auth().signInWithEmailAndPassword(email, password)
-                .then((user) => {
+                .then((userCredential) => {
+                    var user = userCredential.user
+                    console.log(user.uid)
                     localStorage.setItem('isLogged', true)
                     history.push('/home')
                 })

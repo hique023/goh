@@ -25,7 +25,10 @@ export default function Register() {
         if (dominio[1] === dominioValidator) {
             console.log('Email válido')
             firebase.auth().createUserWithEmailAndPassword(email, password)
-                .then((user) => {
+                .then((userCredential) => {
+
+                    var user = userCredential.user
+                    console.log(user.uid)
 
                     // firebase.auth().getUserByEmail(email)
                     //     .then((userRecord) => {
