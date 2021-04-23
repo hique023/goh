@@ -14,8 +14,12 @@ export default function StageLink(props) {
         history.push('/stage')
     }
 
+    const cardStyle = {
+        backgroundColor: props.color || 'var(--green-soft)'
+    }
+
     return (
-        <div className="containerStageLink">
+        <div className="containerStageLink" style={cardStyle}>
             <div className="contentStageLink">
                 <button onClick={goStage}>
                     <div className="leftStageLink">

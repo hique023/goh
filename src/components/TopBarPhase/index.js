@@ -21,7 +21,7 @@ export default function TopBarPhase(props) {
 
     return (
         <div className="topBarPhase" style={cardStyle}>
-            <div className="leftTopBarPhase">
+            <div className="leftTopBarPhase" style={cardStyle}>
                 <button onClick={backLink} className="back-link">
                     <IoArrowBack size={30} color="white" />
                 </button>
