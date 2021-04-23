@@ -26,7 +26,18 @@ export default function Register() {
             console.log('Email válido')
             firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then((user) => {
-                    alert('Cadastro com sucesso!')
+
+                    // firebase.auth().getUserByEmail(email)
+                    //     .then((userRecord) => {
+                    //         // See the UserRecord reference doc for the contents of userRecord.
+                    //         console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
+                    //     })
+                    //     .catch((error) => {
+                    //         console.log('Error fetching user data:', error);
+                    //     });
+
+
+                    alert(`Cadastro com sucesso! ${user}`)
                     // localStorage.setItem('firstName', name)
                     // localStorage.setItem('lastName', lastname)
                     localStorage.setItem('email', email)
