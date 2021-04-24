@@ -18,6 +18,7 @@ export default function Register() {
     const [profileImg, setProfileImg] = useState('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png')
     const dominio = email.split('@')
     const dominioValidator = 'cappta.com.br'
+    const db = firebase.firestore();
 
     async function handleRegister(e) {
         e.preventDefault()
@@ -27,18 +28,8 @@ export default function Register() {
             firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
 
-                    var user = userCredential.user
-                    console.log(user.uid)
-
-                    // firebase.auth().getUserByEmail(email)
-                    //     .then((userRecord) => {
-                    //         // See the UserRecord reference doc for the contents of userRecord.
-                    //         console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
-                    //     })
-                    //     .catch((error) => {
-                    //         console.log('Error fetching user data:', error);
-                    //     });
-
+                    var user = userCredential.user.uid
+                    console.log(user)
 
                     alert(`Cadastro com sucesso! ${user}`)
                     // localStorage.setItem('firstName', name)
@@ -56,6 +47,19 @@ export default function Register() {
                     setPassword('')
                     setGroup('')
                     history.push('/home')
+
+                    db.collection("users").doc(user).set({
+                        name: name,
+                        group: group
+                    })
+                        .then((docRef) => {
+                            alert(`Dados do usuário cadastrados com sucesso!`)
+                        })
+                        .catch((error) => {
+                            // console.error("Error adding document: ", error);
+                            alert('Erro ao cadastrar dados do usuário!')
+                        });
+
                 })
                 .catch((error) => {
                     var errorCode = error.code;
