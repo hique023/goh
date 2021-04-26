@@ -41,6 +41,7 @@ export default function Logon() {
                             const nameUser = doc.data().name
                             const firstName = nameUser.split(' ')
                             localStorage.setItem('nameUser', firstName[0])
+                            localStorage.setItem('email', email)
                             console.log(firstName)
                             history.push('/home')
                         } else {
