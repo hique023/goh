@@ -33,7 +33,6 @@ export default function Logon() {
                     var userUid = userCredential.user.uid
                     console.log(userUid)
                     localStorage.setItem('isLogged', true)
-                    history.push('/home')
 
                     db.collection('users').doc(userUid).get().then((doc) => {
                         if (doc.exists) {
@@ -43,6 +42,7 @@ export default function Logon() {
                             const firstName = nameUser.split(' ')
                             localStorage.setItem('nameUser', firstName[0])
                             console.log(firstName)
+                            history.push('/home')
                         } else {
                             // doc.data() will be undefined in this case
                             console.log("No such document!");
