@@ -15,6 +15,7 @@ export default function Logon() {
     const [password, setPassword] = useState('')
     const dominio = email.split('@')
     const dominioValidator = 'cappta.com.br'
+    const db = firebase.firestore();
 
     const history = useHistory()
 
@@ -29,10 +30,25 @@ export default function Logon() {
             console.log('Email válido')
             firebase.auth().signInWithEmailAndPassword(email, password)
                 .then((userCredential) => {
-                    var user = userCredential.user
-                    console.log(user.uid)
+                    var userUid = userCredential.user.uid
+                    console.log(userUid)
                     localStorage.setItem('isLogged', true)
                     history.push('/home')
+
+                    db.collection('users').doc(userUid).get().then((doc) => {
+                        if (doc.exists) {
+                            console.log("Document data:", doc.data());
+
+                            const nameUser = doc.data().name
+                            localStorage.setItem('nameUser', nameUser)
+                            console.log(nameUser)
+                        } else {
+                            // doc.data() will be undefined in this case
+                            console.log("No such document!");
+                        }
+                    }).catch((error) => {
+                        console.log("Error getting document:", error);
+                    });
                 })
                 .catch((error) => {
                     var errorCode = error.code;

@@ -1,5 +1,5 @@
 // Global
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom'
 import firebase from '../../firebaseConfig.js'
 
@@ -32,11 +32,7 @@ export default function Register() {
                     console.log(user)
 
                     alert(`Cadastro com sucesso! ${user}`)
-                    // localStorage.setItem('firstName', name)
-                    // localStorage.setItem('lastName', lastname)
                     localStorage.setItem('email', email)
-                    // localStorage.setItem('activeSession', true)
-                    // localStorage.setItem('isLogged', true)
                     console.log('Form enviado')
                     console.log(name)
                     console.log(email)
@@ -46,6 +42,7 @@ export default function Register() {
                     setEmail('')
                     setPassword('')
                     setGroup('')
+                    localStorage.setItem('nameUser', name)
                     history.push('/home')
 
                     db.collection("users").doc(user).set({
