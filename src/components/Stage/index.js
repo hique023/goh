@@ -1,6 +1,7 @@
 // Global
 import React from 'react'
 import TopBar from '../TopBarPhase'
+import Questions from '../Questions'
 
 // Assets
 import './styles.css'
@@ -16,6 +17,10 @@ export default function Phase() {
 
             <div className="timerStage">
                 <h1>02:00</h1>
+            </div>
+
+            <div className="containerQuestions">
+                <Questions />
             </div>
         </div>
     )
