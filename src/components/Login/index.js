@@ -40,8 +40,9 @@ export default function Logon() {
                             console.log("Document data:", doc.data());
 
                             const nameUser = doc.data().name
-                            localStorage.setItem('nameUser', nameUser)
-                            console.log(nameUser)
+                            const firstName = nameUser.split(' ')
+                            localStorage.setItem('nameUser', firstName[0])
+                            console.log(firstName)
                         } else {
                             // doc.data() will be undefined in this case
                             console.log("No such document!");

@@ -33,16 +33,17 @@ export default function Register() {
 
                     alert(`Cadastro com sucesso! ${user}`)
                     localStorage.setItem('email', email)
+                    setName('')
+                    setEmail('')
+                    setPassword('')
+                    setGroup('')
+                    const firstName = name.split(' ')
+                    localStorage.setItem('nameUser', firstName[0])
                     console.log('Form enviado')
                     console.log(name)
                     console.log(email)
                     console.log(password)
                     console.log(group)
-                    setName('')
-                    setEmail('')
-                    setPassword('')
-                    setGroup('')
-                    localStorage.setItem('nameUser', name)
                     history.push('/home')
 
                     db.collection("users").doc(user).set({
