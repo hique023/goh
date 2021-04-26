@@ -16,10 +16,12 @@ export default function Register() {
     const [password, setPassword] = useState('')
     const [group, setGroup] = useState('RC')
     const [profileImg, setProfileImg] = useState('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png')
+    const [userUid, setUserUid] = useState('')
+    const [avatarUrl, setAvatarUrl] = useState('')
     const dominio = email.split('@')
     const dominioValidator = 'cappta.com.br'
     const db = firebase.firestore();
-    const storage = firebase.storage();
+    // const storage = firebase.storage();
 
 
     async function handleRegister(e) {
@@ -30,11 +32,10 @@ export default function Register() {
             firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
 
-                    var user = userCredential.user.uid
-                    console.log(user)
+                    setUserUid(userCredential.user.uid)
+                    console.log(userUid)
 
-                    alert(`Cadastro com sucesso! ${user}`)
-                    imageHandler()
+                    alert(`Cadastro com sucesso! ${userUid}`)
                     localStorage.setItem('email', email)
                     setName('')
                     setEmail('')
@@ -47,14 +48,14 @@ export default function Register() {
                     console.log(email)
                     console.log(password)
                     console.log(group)
-                    history.push('/home')
 
-                    db.collection("users").doc(user).set({
+                    db.collection("users").doc(userUid).set({
                         name: name,
                         group: group
                     })
                         .then((docRef) => {
-                            alert(`Dados do usuário cadastrados com sucesso!`)
+                            // alert(`Dados do usuário cadastrados com sucesso!`)
+                            history.push('/home')
                         })
                         .catch((error) => {
                             // console.error("Error adding document: ", error);
@@ -71,26 +72,30 @@ export default function Register() {
             alert('Insira seu email corporativo')
             setEmail('')
         }
-
     }
 
-    function imageHandler(e) {
+    async function imageHandler(e) {
         const reader = new FileReader();
 
         const file = e.target.files[0]
         const storageRef = firebase.storage().ref()
-        const fileRef = storageRef.child(file.name)
+        const fileRef = storageRef.child(`herois/${file.name}`)
 
         reader.onload = (e) => {
             if (reader.readyState === 2) {
                 setProfileImg(e.target.result)
 
-                fileRef.put(file).then(() => {
-                    console.log(`Upload do avatar ${file.name}`)
-                })
+                // fileRef.put(file).then(() => {
+                //     console.log(`Upload do avatar ${file.name}`)
+                // })
 
+                fileRef.put(file).then(async () => {
+                    console.log(`Upload do avatar ${file.name}. URL: ${await fileRef.getDownloadURL()}`)
+                })
             }
         }
+        setAvatarUrl(await fileRef.getDownloadURL())
+        console.log(avatarUrl)
         reader.readAsDataURL(e.target.files[0])
     };
 
