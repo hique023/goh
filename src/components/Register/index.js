@@ -19,6 +19,8 @@ export default function Register() {
     const dominio = email.split('@')
     const dominioValidator = 'cappta.com.br'
     const db = firebase.firestore();
+    const storage = firebase.storage();
+
 
     async function handleRegister(e) {
         e.preventDefault()
@@ -32,6 +34,7 @@ export default function Register() {
                     console.log(user)
 
                     alert(`Cadastro com sucesso! ${user}`)
+                    imageHandler()
                     localStorage.setItem('email', email)
                     setName('')
                     setEmail('')
@@ -73,9 +76,19 @@ export default function Register() {
 
     function imageHandler(e) {
         const reader = new FileReader();
+
+        const file = e.target.files[0]
+        const storageRef = firebase.storage().ref()
+        const fileRef = storageRef.child(file.name)
+
         reader.onload = (e) => {
             if (reader.readyState === 2) {
                 setProfileImg(e.target.result)
+
+                fileRef.put(file).then(() => {
+                    console.log(`Upload do avatar ${file.name}`)
+                })
+
             }
         }
         reader.readAsDataURL(e.target.files[0])
