@@ -25,7 +25,7 @@ export default function TopBarPhase(props) {
                 <button onClick={backLink} className="back-link">
                     <IoArrowBack size={30} color="white" />
                 </button>
-                <h1>{props.name}</h1>
+                <h1>{props.name}!</h1>
             </div>
             {/* <div className="rightTopBarPhase">
                 <Link className="back-link" to="/">

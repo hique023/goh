@@ -10,11 +10,12 @@ export default function Phase() {
 
     const phaseId = localStorage.getItem('phaseId')
     const color = localStorage.getItem('color')
+    const nameUser = localStorage.getItem('nameUser')
 
     return (
         <div className="containerPhase">
 
-            <TopBarPhase name="Olá, Pedro!" color={color} />
+            <TopBarPhase name={`Olá, ${nameUser}`} color={color} />
 
             <div className="phaseBar">
                 <h1>{phaseId}</h1>

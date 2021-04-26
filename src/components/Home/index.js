@@ -8,9 +8,12 @@ import ListPhases from '../ListPhases'
 import './styles.css'
 
 export default function Home() {
+
+    const nameUser = localStorage.getItem('nameUser')
+
     return (
         <div className="containerHome">
-            <TopBar />
+            <TopBar name={nameUser} />
             <Sidebar />
             <ListPhases />
         </div>
