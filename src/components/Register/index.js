@@ -24,7 +24,7 @@ export default function Register() {
     // const storage = firebase.storage();
 
 
-    async function handleRegister(e) {
+    function handleRegister(e) {
         e.preventDefault()
 
         if (dominio[1] === dominioValidator) {
@@ -32,15 +32,15 @@ export default function Register() {
             firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
 
-                    setUserUid(userCredential.user.uid)
-                    console.log(userUid)
+                    const uid = userCredential.user.uid.toString()
+                    console.log(uid)
 
-                    alert(`Cadastro com sucesso! ${userUid}`)
+                    console.log(`Cadastro com sucesso! ${userUid}`)
                     localStorage.setItem('email', email)
-                    setName('')
-                    setEmail('')
-                    setPassword('')
-                    setGroup('')
+                    // setName('')
+                    // setEmail('')
+                    // setPassword('')
+                    // setGroup('')
                     const firstName = name.split(' ')
                     localStorage.setItem('nameUser', firstName[0])
                     console.log('Form enviado')
@@ -49,9 +49,13 @@ export default function Register() {
                     console.log(password)
                     console.log(group)
 
-                    db.collection("users").doc(userUid).set({
+                    db.collection("users").doc(uid).set({
                         name: name,
-                        group: group
+                        firstName: firstName,
+                        uid: uid,
+                        email: email,
+                        avatar: avatarUrl,
+                        score: 0
                     })
                         .then((docRef) => {
                             // alert(`Dados do usuário cadastrados com sucesso!`)
@@ -85,17 +89,13 @@ export default function Register() {
             if (reader.readyState === 2) {
                 setProfileImg(e.target.result)
 
-                // fileRef.put(file).then(() => {
-                //     console.log(`Upload do avatar ${file.name}`)
-                // })
-
                 fileRef.put(file).then(async () => {
-                    console.log(`Upload do avatar ${file.name}. URL: ${await fileRef.getDownloadURL()}`)
+                    console.log(`Upload do avatar ${file.name}.`)
+                    await setAvatarUrl(await fileRef.getDownloadURL())
+                    console.log(avatarUrl)
                 })
             }
         }
-        setAvatarUrl(await fileRef.getDownloadURL())
-        console.log(avatarUrl)
         reader.readAsDataURL(e.target.files[0])
     };
 
@@ -134,6 +134,8 @@ export default function Register() {
                             />
 
                         </label>
+
+                        <h1>{avatarUrl}</h1>
 
                         <input
                             placeholder="Nome"
