@@ -16,18 +16,18 @@ export default function Register() {
     const [password, setPassword] = useState('')
     const [group, setGroup] = useState('RC')
     const [profileImg, setProfileImg] = useState('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png')
-    const [userUid, setUserUid] = useState('')
     const [avatarUrl, setAvatarUrl] = useState('')
     const dominio = email.split('@')
     const dominioValidator = 'cappta.com.br'
     const db = firebase.firestore();
+    // const [userUid, setUserUid] = useState('')
     // const storage = firebase.storage();
 
 
     function handleRegister(e) {
         e.preventDefault()
 
-        if (dominio[1] === dominioValidator) {
+        if (dominio[1] === dominioValidator && group === 'rc' || group === 'fidelizacao' || group === 'onboarding' && avatarUrl != null) {
             console.log('Email válido')
             firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
@@ -35,12 +35,12 @@ export default function Register() {
                     const uid = userCredential.user.uid.toString()
                     console.log(uid)
 
-                    console.log(`Cadastro com sucesso! ${userUid}`)
-                    localStorage.setItem('email', email)
+                    // console.log(`Cadastro com sucesso! ${userUid}`)
                     // setName('')
                     // setEmail('')
                     // setPassword('')
                     // setGroup('')
+                    localStorage.setItem('email', email)
                     const firstName = name.split(' ')
                     localStorage.setItem('nameUser', firstName[0])
                     console.log('Form enviado')
@@ -51,14 +51,17 @@ export default function Register() {
 
                     db.collection("users").doc(uid).set({
                         name: name,
-                        firstName: firstName,
-                        uid: uid,
+                        firstName: firstName[0],
                         email: email,
+                        group: group,
                         avatar: avatarUrl,
-                        score: 0
+                        score: 0,
+                        uid: uid
                     })
                         .then((docRef) => {
                             // alert(`Dados do usuário cadastrados com sucesso!`)
+                            console.log(avatarUrl)
+                            alert(avatarUrl)
                             history.push('/home')
                         })
                         .catch((error) => {
@@ -73,8 +76,7 @@ export default function Register() {
                     alert(errorMessage)
                 });
         } else {
-            alert('Insira seu email corporativo')
-            setEmail('')
+            alert('Preencha todos os campos')
         }
     }
 
@@ -130,6 +132,7 @@ export default function Register() {
                                 accept="image/*"
                                 name="image-upload"
                                 id="imageUpload"
+                                required
                                 onChange={imageHandler}
                             />
 
@@ -140,25 +143,29 @@ export default function Register() {
                         <input
                             placeholder="Nome"
                             value={name}
+                            required
                             onChange={e => setName(e.target.value)}
                         />
 
                         <input
                             type="email"
-                            placeholder="E-mail"
+                            placeholder="E-mail Corporativo"
                             value={email}
+                            required
                             onChange={e => setEmail(e.target.value)}
                         />
 
-                        <div className="input-group">
+                        <div className="input-group" required>
                             <input
                                 placeholder="Senha"
                                 type="password"
                                 value={password}
+                                required
                                 onChange={e => setPassword(e.target.value)}
                             />
 
-                            <select name="group" value={group} onChange={e => { setGroup(e.target.value) }}>
+                            <select name="group" value={group} required onChange={e => { setGroup(e.target.value) }}>
+                                <option selected hidden>Time</option>
                                 <option value="rc">RC</option>
                                 <option value="fidelizacao">Fidelização</option>
                                 <option value="onboarding">Onboarding</option>
