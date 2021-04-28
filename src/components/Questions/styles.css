@@ -9,16 +9,14 @@
 }
 
 .containerQuestions h3 {
-  margin-top: 10px;
+  margin-top: 35px;
 }
 
 .containerQuestions .contentQuestions {
-  background-color: burlywood;
   padding: 15px;
 }
 
 .containerQuestions .contentAnswers {
-  background-color: darkcyan;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -36,4 +34,27 @@
 
 .containerQuestions .contentAnswers div + div {
   margin-top: 20px;
+}
+
+.containerQuestions .buttonsQuestions {
+  height: 4vh;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerQuestions .buttonsQuestions button {
+  margin: 0 20px;
+  height: 100%;
+  width: 15%;
+  border-radius: 10px;
+  outline: 0;
+  color: var(--white);
+  border: 0;
+  transition: opacity 0.2s;
+}
+
+.containerQuestions .buttonsQuestions button:hover {
+  opacity: 80%;
 }

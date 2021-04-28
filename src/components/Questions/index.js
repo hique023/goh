@@ -9,6 +9,11 @@ export default function Questions() {
     const [question, setQuestion] = useState('Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum corrupti qui voluptatem quam enim exercitationem accusantium porro, ex quae, fugiat aliquid, laborum aspernatur commodi dicta odit maiores id iusto. Numquam?')
     const [correctAnswer, setCorrectAnswer] = useState('')
     const [answerSelected, setAnswerSelected] = useState('')
+    const color = localStorage.getItem('color')
+
+    const cardStyle = {
+        backgroundColor: color || 'var(--green-soft)'
+    }
 
     return (
         <div className="containerQuestions">
@@ -59,6 +64,11 @@ export default function Questions() {
             </div>
 
             <h3>Resposta selecionada: {answerSelected}</h3>
+
+            <div className="buttonsQuestions">
+                <button style={cardStyle}>Anterior</button>
+                <button style={cardStyle}>Próxima</button>
+            </div>
         </div>
     )
 }
