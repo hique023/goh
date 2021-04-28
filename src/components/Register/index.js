@@ -164,8 +164,8 @@ export default function Register() {
                                 onChange={e => setPassword(e.target.value)}
                             />
 
-                            <select name="group" value={group} required onChange={e => { setGroup(e.target.value) }}>
-                                <option selected hidden>Time</option>
+                            <select name="group" value={group} onChange={e => { setGroup(e.target.value) }}>
+                                <option hidden>Time</option>
                                 <option value="rc">RC</option>
                                 <option value="fidelizacao">Fidelização</option>
                                 <option value="onboarding">Onboarding</option>
