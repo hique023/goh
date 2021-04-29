@@ -25,7 +25,7 @@ export default function Timer() {
         let { total, days, hours, minutes, seconds } = getTimerRemaining(deadline)
         if (total >= 0) {
             setTimer(
-                (hours > 9 ? hours : '0' + hours) + ':' +
+                // (hours > 9 ? hours : '0' + hours) + ':' +
                 (minutes > 9 ? minutes : '0' + minutes) + ':' +
                 (seconds > 9 ? seconds : '0' + seconds)
             )
