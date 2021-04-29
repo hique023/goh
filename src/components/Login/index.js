@@ -40,8 +40,12 @@ export default function Logon() {
 
                             const nameUser = doc.data().name
                             const firstName = nameUser.split(' ')
+                            const score = doc.data().score
+                            const avatar = doc.data().avatar
                             localStorage.setItem('nameUser', firstName[0])
                             localStorage.setItem('email', email)
+                            localStorage.setItem('score', score)
+                            localStorage.setItem('avatar', avatar)
                             console.log(firstName)
                             history.push('/home')
                         } else {

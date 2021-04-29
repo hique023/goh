@@ -17,6 +17,7 @@ export default function Register() {
     const [group, setGroup] = useState('RC')
     const [profileImg, setProfileImg] = useState('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png')
     const [avatarUrl, setAvatarUrl] = useState('')
+    const [score, setScore] = useState(0)
     const dominio = email.split('@')
     const dominioValidator = 'cappta.com.br'
     const db = firebase.firestore();
@@ -55,12 +56,14 @@ export default function Register() {
                         email: email,
                         group: group,
                         avatar: avatarUrl,
-                        score: 0,
+                        score: score,
                         uid: uid
                     })
                         .then((docRef) => {
                             // alert(`Dados do usuário cadastrados com sucesso!`)
                             console.log(avatarUrl)
+                            localStorage.setItem('avatar', avatarUrl)
+                            localStorage.setItem('score', score)
                             alert(avatarUrl)
                             history.push('/home')
                         })
@@ -137,8 +140,6 @@ export default function Register() {
                             />
 
                         </label>
-
-                        <h1>{avatarUrl}</h1>
 
                         <input
                             placeholder="Nome"
