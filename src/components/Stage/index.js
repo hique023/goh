@@ -2,6 +2,7 @@
 import React from 'react'
 import TopBar from '../TopBarPhase'
 import Questions from '../Questions'
+import Timer from '../Timer'
 
 // Assets
 import './styles.css'
@@ -16,7 +17,7 @@ export default function Phase() {
             <TopBar name={`Olá, ${nameUser}`} color={color} />
 
             <div className="timerStage">
-                <h1>02:00</h1>
+                <Timer />
             </div>
 
             <div className="containerQuestions">
