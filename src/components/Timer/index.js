@@ -13,11 +13,12 @@ export default function Timer() {
         const total = Date.parse(endtime) - Date.parse(new Date())
         const seconds = Math.floor((total / 1000) % 60)
         const minutes = Math.floor((total / 1000 / 60) % 60)
-        const hours = Math.floor((total / 1000 * 60 * 60) % 24)
-        const days = Math.floor(total / (1000 * 60 * 60 * 24))
+        // const hours = Math.floor((total / 1000 * 60 * 60) % 24)
+        // const days = Math.floor(total / (1000 * 60 * 60 * 24))
 
         return {
-            total, days, hours, minutes, seconds
+            // total, days, hours, minutes, seconds
+            total, minutes, seconds
         }
     }
 
@@ -36,7 +37,7 @@ export default function Timer() {
 
     function clearTimer(endtime) {
 
-        setTimer('00:02:00')
+        setTimer('02:00')
 
         if (intervalRef.current) clearInterval(intervalRef.current)
         const id = setInterval(() => {
