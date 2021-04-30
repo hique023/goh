@@ -37,7 +37,7 @@ export default function Timer() {
 
     function clearTimer(endtime) {
 
-        setTimer('02:00')
+        setTimer('10:00')
 
         if (intervalRef.current) clearInterval(intervalRef.current)
         const id = setInterval(() => {
@@ -49,7 +49,7 @@ export default function Timer() {
 
     function getDeadlineTime() {
         let deadline = new Date()
-        deadline.setSeconds(deadline.getSeconds() + 120)
+        deadline.setSeconds(deadline.getSeconds() + 600)
         return deadline
     }
 

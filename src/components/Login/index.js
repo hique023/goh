@@ -13,8 +13,8 @@ import './styles.css'
 export default function Logon() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const dominio = email.split('@')
-    const dominioValidator = 'cappta.com.br'
+    // const dominio = email.split('@')
+    // const dominioValidator = 'cappta.com.br'
     const db = firebase.firestore();
 
     const history = useHistory()
@@ -26,45 +26,45 @@ export default function Logon() {
     async function handleLogin(e) {
         e.preventDefault()
 
-        if (dominio[1] === dominioValidator) {
-            console.log('Email válido')
-            firebase.auth().signInWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    var userUid = userCredential.user.uid
-                    console.log(userUid)
-                    localStorage.setItem('isLogged', true)
+        // if (dominio[1] === dominioValidator) {
+        console.log('Email válido')
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                var userUid = userCredential.user.uid
+                console.log(userUid)
+                localStorage.setItem('isLogged', true)
 
-                    db.collection('users').doc(userUid).get().then((doc) => {
-                        if (doc.exists) {
-                            console.log("Document data:", doc.data());
+                db.collection('users').doc(userUid).get().then((doc) => {
+                    if (doc.exists) {
+                        console.log("Document data:", doc.data());
 
-                            const nameUser = doc.data().name
-                            const firstName = nameUser.split(' ')
-                            const score = doc.data().score
-                            const avatar = doc.data().avatar
-                            localStorage.setItem('nameUser', firstName[0])
-                            localStorage.setItem('email', email)
-                            localStorage.setItem('score', score)
-                            localStorage.setItem('avatar', avatar)
-                            console.log(firstName)
-                            history.push('/home')
-                        } else {
-                            // doc.data() will be undefined in this case
-                            console.log("No such document!");
-                        }
-                    }).catch((error) => {
-                        console.log("Error getting document:", error);
-                    });
-                })
-                .catch((error) => {
-                    var errorCode = error.code;
-                    setPassword('')
-                    var errorMessage = error.message;
-                    alert(errorMessage)
+                        const nameUser = doc.data().name
+                        const firstName = nameUser.split(' ')
+                        const score = doc.data().score
+                        const avatar = doc.data().avatar
+                        localStorage.setItem('nameUser', firstName[0])
+                        localStorage.setItem('email', email)
+                        localStorage.setItem('score', score)
+                        localStorage.setItem('avatar', avatar)
+                        console.log(firstName)
+                        history.push('/home')
+                    } else {
+                        // doc.data() will be undefined in this case
+                        console.log("No such document!");
+                    }
+                }).catch((error) => {
+                    console.log("Error getting document:", error);
                 });
-        } else {
-            alert('Insira seu email corporativo')
-        }
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                setPassword('')
+                var errorMessage = error.message;
+                alert(errorMessage)
+            });
+        // } else {
+        //     alert('Insira seu email corporativo')
+        // }
 
     }
 
