@@ -33,7 +33,7 @@
 }
 
 .contentStageLink button:hover {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .containerStageLink .contentStageLink button .leftStageLink {

@@ -66,7 +66,6 @@ export default function Questions() {
             <h3>Resposta selecionada: {answerSelected}</h3>
 
             <div className="buttonsQuestions">
-                <button style={cardStyle}>Anterior</button>
                 <button style={cardStyle}>Próxima</button>
             </div>
         </div>
