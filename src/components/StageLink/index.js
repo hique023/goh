@@ -11,6 +11,7 @@ export default function StageLink(props) {
     const history = useHistory()
 
     function goStage() {
+        localStorage.setItem('stageId', props.stageId)
         history.push('/stage')
     }
 

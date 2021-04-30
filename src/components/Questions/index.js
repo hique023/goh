@@ -1,5 +1,6 @@
 // Global
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import firebase from '../../firebaseConfig.js'
 
 // Assets
 import './styles.css'
@@ -10,10 +11,34 @@ export default function Questions() {
     const [correctAnswer, setCorrectAnswer] = useState('')
     const [answerSelected, setAnswerSelected] = useState('')
     const color = localStorage.getItem('color')
+    const phaseId = localStorage.getItem('phaseId')
+    const stageId = localStorage.getItem('stageId')
+    const db = firebase.firestore();
 
     const cardStyle = {
         backgroundColor: color || 'var(--green-soft)'
     }
+
+    function getQuestions() {
+
+        var docRef = db.collection(phaseId).doc(stageId);
+
+        docRef.get().then((doc) => {
+            if (doc.exists) {
+                console.log("Document data:", doc.data());
+            } else {
+                // doc.data() will be undefined in this case
+                console.log("No such document!");
+            }
+        }).catch((error) => {
+            console.log("Error getting document:", error);
+        });
+
+    }
+
+    useEffect(() => {
+        getQuestions()
+    }, [])
 
     return (
         <div className="containerQuestions">
