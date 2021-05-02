@@ -8,7 +8,7 @@ import './styles.css'
 export default function Questions() {
 
     const [data, setData] = useState(null)
-    const [question, setQuestion] = useState('Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum corrupti qui voluptatem quam enim exercitationem accusantium porro, ex quae, fugiat aliquid, laborum aspernatur commodi dicta odit maiores id iusto. Numquam?')
+    const [question, setQuestion] = useState('')
     const [answer1, setAnswer1] = useState('')
     const [answer2, setAnswer2] = useState('')
     const [answer3, setAnswer3] = useState('')
@@ -41,6 +41,7 @@ export default function Questions() {
 
                 console.log('-----------------------------');
                 console.table("Document data:", data);
+                console.log('Document Status', data.status)
                 console.table("Document data:", data[1]);
 
                 const pergunta = data[count]
