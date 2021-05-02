@@ -27,7 +27,17 @@ export default function Questions() {
 
     function nextQuestion() {
         setCount(count + 1)
+        setAnswerSelected('')
         console.log(count);
+        clearRadio()
+    }
+
+    function clearRadio() {
+        // eslint-disable-next-line no-unused-expressions
+        const radio1 = document.getElementById('answer1').checked = false
+        const radio2 = document.getElementById('answer2').checked = false
+        const radio3 = document.getElementById('answer3').checked = false
+        const radio4 = document.getElementById('answer4').checked = false
     }
 
     function getQuestions() {
