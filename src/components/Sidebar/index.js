@@ -28,7 +28,7 @@ export default function Sidebar() {
                     </div>
 
                     <div className="linksBottom">
-                        <a href="https://chat.whatsapp.com/KmyYJxN4EdEHg6R2kjYvPX" target='blank'>
+                        <a href="https://chat.whatsapp.com/KmyYJxN4EdEHg6R2kjYvPX" target='blank' rel="noreferrer noopener">
                             <RiWhatsappFill size={60} color="black" />
                         </a>
                     </div>

@@ -29,25 +29,24 @@
 }
 
 .containerSidebar .contentSidebar .linksSidebar {
-  background: cyan;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 
 .containerSidebar .contentSidebar .linksTop {
-  background: crimson;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .containerSidebar .contentSidebar .linksBottom {
-  background: chocolate;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .containerSidebar .contentSidebar .logoSidebar img {
