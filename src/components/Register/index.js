@@ -64,7 +64,7 @@ export default function Register() {
                             console.log(avatarUrl)
                             localStorage.setItem('avatar', avatarUrl)
                             localStorage.setItem('score', score)
-                            alert(avatarUrl)
+                            // alert(avatarUrl)
                             history.push('/home')
                         })
                         .catch((error) => {

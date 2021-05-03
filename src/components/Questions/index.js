@@ -1,6 +1,8 @@
 // Global
 import React, { useEffect, useState } from 'react'
 import firebase from '../../firebaseConfig.js'
+import StageFinishModal from '../StageFinishModal'
+import { useHistory } from 'react-router-dom'
 
 // Assets
 import './styles.css'
@@ -16,10 +18,12 @@ export default function Questions() {
     const [correctAnswer, setCorrectAnswer] = useState('')
     const [answerSelected, setAnswerSelected] = useState('')
     const [count, setCount] = useState(1)
+    const [activeModal, setActiveModal] = useState(false)
     const color = localStorage.getItem('color')
     const phaseId = localStorage.getItem('phaseId')
     const stageId = localStorage.getItem('stageId')
     const db = firebase.firestore();
+    const history = useHistory()
 
     const cardStyle = {
         backgroundColor: color || 'var(--green-soft)'
@@ -30,14 +34,19 @@ export default function Questions() {
         setAnswerSelected('')
         console.log(count);
         clearRadio()
+
+        if (count > 10) {
+            alert('Etapa finalizada! 150xp')
+            history.goBack()
+            // setActiveModal(true)
+        }
     }
 
     function clearRadio() {
-        // eslint-disable-next-line no-unused-expressions
-        const radio1 = document.getElementById('answer1').checked = false
-        const radio2 = document.getElementById('answer2').checked = false
-        const radio3 = document.getElementById('answer3').checked = false
-        const radio4 = document.getElementById('answer4').checked = false
+        document.getElementById('answer1').checked = false
+        document.getElementById('answer2').checked = false
+        document.getElementById('answer3').checked = false
+        document.getElementById('answer4').checked = false
     }
 
     function getQuestions() {
@@ -50,6 +59,7 @@ export default function Questions() {
                 setData(data)
 
                 console.log('-----------------------------');
+                console.log(count)
                 console.table("Document data:", data);
                 console.log('Document Status', data.status)
                 console.table("Document data:", data[1]);
@@ -93,12 +103,25 @@ export default function Questions() {
         });
     }
 
+    function ComponentModal() {
+        return <StageFinishModal />
+    }
+
+    function ShowModal() {
+        const show = activeModal
+
+        if (show) {
+            return <ComponentModal />
+        }
+    }
+
     useEffect(() => {
         getQuestions()
     }, [count])
 
     return (
         <div className="containerQuestions">
+
             <div className="contentQuestions">
                 <h1>{question}</h1>
             </div>
