@@ -28,6 +28,28 @@
   display: flex;
 }
 
+.containerSidebar .contentSidebar .linksSidebar {
+  background: cyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containerSidebar .contentSidebar .linksTop {
+  background: crimson;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerSidebar .contentSidebar .linksBottom {
+  background: chocolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .containerSidebar .contentSidebar .logoSidebar img {
   width: 10vh;
 }

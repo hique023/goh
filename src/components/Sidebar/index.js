@@ -7,6 +7,7 @@ import './styles.css'
 import logo from '../../assets/logo.png'
 import { ImHome } from "react-icons/im";
 import { GiPodium } from "react-icons/gi";
+import { RiWhatsappFill } from "react-icons/ri";
 
 export default function Sidebar() {
     return (
@@ -15,13 +16,23 @@ export default function Sidebar() {
                 <div className="logoSidebar">
                     <img src={logo} alt="Logo" />
                 </div>
-                <Link to="/home">
-                    <ImHome className="svgSelect" size={60} color="black" />
-                </Link>
+                <div className="linksSidebar">
+                    <div className="linksTop">
+                        <Link to="/home">
+                            <ImHome className="svgSelect" size={60} color="black" />
+                        </Link>
 
-                <Link to="/ranking">
-                    <GiPodium size={60} color="black" />
-                </Link>
+                        <Link to="/ranking">
+                            <GiPodium size={60} color="black" />
+                        </Link>
+                    </div>
+
+                    <div className="linksBottom">
+                        <a href="https://chat.whatsapp.com/KmyYJxN4EdEHg6R2kjYvPX" target='blank'>
+                            <RiWhatsappFill size={60} color="black" />
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     )
