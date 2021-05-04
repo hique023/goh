@@ -23,10 +23,10 @@ export default function Phase() {
             </div>
 
             <div className="listStage">
-                <StageLink name="Etapa 1" stageId="etapa1" color={color} />
-                <StageLink name="Etapa 2" stageId="etapa2" color={color} />
-                <StageLink name="Etapa 3" stageId="etapa3" color={color} />
-                <StageLink name="Etapa 4" stageId="etapa4" color={color} />
+                <StageLink name="Quiz - Etapa 1" stageId="etapa1" color={color} />
+                <StageLink name="Quiz - Etapa 2" stageId="etapa2" color={color} />
+                <StageLink name="Quiz - Etapa 3" stageId="etapa3" color={color} />
+                <StageLink name="Quiz - Etapa 4" stageId="etapa4" color={color} />
             </div>
 
         </div>

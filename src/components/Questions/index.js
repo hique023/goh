@@ -34,12 +34,6 @@ export default function Questions() {
         setAnswerSelected('')
         console.log(count);
         clearRadio()
-
-        if (count > 10) {
-            alert('Etapa finalizada! 150xp')
-            history.goBack()
-            // setActiveModal(true)
-        }
     }
 
     function clearRadio() {
@@ -103,17 +97,17 @@ export default function Questions() {
         });
     }
 
-    function ComponentModal() {
-        return <StageFinishModal />
-    }
+    // function ComponentModal() {
+    //     return <StageFinishModal />
+    // }
 
-    function ShowModal() {
-        const show = activeModal
+    // function ShowModal() {
+    //     const show = activeModal
 
-        if (show) {
-            return <ComponentModal />
-        }
-    }
+    //     if (show) {
+    //         return <ComponentModal />
+    //     }
+    // }
 
     useEffect(() => {
         getQuestions()
@@ -121,6 +115,10 @@ export default function Questions() {
 
     return (
         <div className="containerQuestions">
+
+            {count > 10 && (
+                <StageFinishModal />
+            )}
 
             <div className="contentQuestions">
                 <h1>{question}</h1>
@@ -170,9 +168,16 @@ export default function Questions() {
 
             <h3>Resposta selecionada: {answerSelected}</h3>
 
-            <div className="buttonsQuestions">
-                <button style={cardStyle} onClick={nextQuestion}>Próxima</button>
-            </div>
+            {count < 10 ? (
+                <div className="buttonsQuestions">
+                    <button style={cardStyle} onClick={nextQuestion}>Próxima</button>
+                </div>
+            ) : (
+                <div className="buttonsQuestions">
+                    <button style={cardStyle} onClick={nextQuestion}>Finalizar</button>
+                </div>
+            )}
+
         </div>
     )
 }

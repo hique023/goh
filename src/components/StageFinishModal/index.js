@@ -1,12 +1,18 @@
 // Global
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 // Assets
 import './styles.css'
 import { AiOutlineClose } from "react-icons/ai"
 
 export default function StageFinishModal() {
-    // const { level, closeLevelUpmodal } = useContext(ChallengesContext);
+
+    const history = useHistory()
+
+    function closeModal() {
+        history.goBack()
+    }
 
     return (
         <div className="overlay">
@@ -20,8 +26,7 @@ export default function StageFinishModal() {
                     <p>Você finalizou uma etapa.</p>
                 </div>
 
-                {/* <button type="button" onClick={closeLevelUpmodal}> */}
-                <button type="button">
+                <button type="button" onClick={closeModal}>
                     <AiOutlineClose size={30} color="black" />
                 </button>
             </div>
