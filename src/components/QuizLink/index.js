@@ -6,14 +6,12 @@ import { useHistory } from 'react-router-dom'
 import './styles.css'
 import { BiChalkboard } from "react-icons/bi";
 
-export default function StageLink(props) {
+export default function QuizLink(props) {
 
     const history = useHistory()
 
-    function goStage() {
-        localStorage.setItem('stageId', props.stageId)
-        localStorage.setItem('subBarName', props.name)
-        history.push('/stage')
+    function goQuiz() {
+        history.push('/quiz')
     }
 
     const cardStyle = {
@@ -21,10 +19,10 @@ export default function StageLink(props) {
     }
 
     return (
-        <div className="containerStageLink" style={cardStyle}>
-            <div className="contentStageLink">
-                <button onClick={goStage}>
-                    <div className="leftStageLink">
+        <div className="containerQuizLink" style={cardStyle}>
+            <div className="contentQuizLink">
+                <button onClick={goQuiz}>
+                    <div className="leftQuizLink">
                         <BiChalkboard size={80} color="black" />
                         <h1>{props.name}</h1>
                     </div>
