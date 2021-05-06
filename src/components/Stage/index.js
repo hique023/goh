@@ -22,13 +22,11 @@ export default function Stage() {
             <div className="listStage">
 
                 <div className="contentStageLink">
-                    <button>
-                        <div className="leftStageLink">
-                            {/* <BiChalkboard size={80} color="black" /> */}
-                            <h1>props.name</h1>
-                        </div>
-                        <h1>400 xp</h1>
-                    </button>
+                    <div className="leftStageLink">
+                        {/* <BiChalkboard size={80} color="black" /> */}
+                        <h1>props.name</h1>
+                    </div>
+                    <h1>400 xp</h1>
                 </div>
 
                 {/* <QuizLink name="Etapa 1" stageId="etapa1" color={color} />

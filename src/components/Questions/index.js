@@ -16,9 +16,9 @@ export default function Questions() {
     const [answer3, setAnswer3] = useState('')
     const [answer4, setAnswer4] = useState('')
     const [correctAnswer, setCorrectAnswer] = useState('')
-    const [answerSelected, setAnswerSelected] = useState('')
+    const [difficulty, setDifficulty] = useState('')
+    const [answerSelected, setAnswerSelected] = useState(null)
     const [count, setCount] = useState(1)
-    const [activeModal, setActiveModal] = useState(false)
     const color = localStorage.getItem('color')
     const phaseId = localStorage.getItem('phaseId')
     const stageId = localStorage.getItem('stageId')
@@ -30,10 +30,18 @@ export default function Questions() {
     }
 
     function nextQuestion() {
-        setCount(count + 1)
-        setAnswerSelected('')
-        console.log(count);
-        clearRadio()
+        // setCount(count + 1)
+        // setAnswerSelected('')
+        // console.log(count);
+        // clearRadio()
+
+        if (answerSelected != null) {
+            setCount(count + 1)
+            setAnswerSelected(null)
+            console.log(count);
+            clearRadio()
+        }
+
     }
 
     function clearRadio() {
@@ -68,25 +76,21 @@ export default function Questions() {
                 const answer3 = pergunta[3]
                 const answer4 = pergunta[4]
                 const correct = pergunta[5]
+                const difficulty = pergunta[6]
                 console.log(question);
                 console.log(answer1);
                 console.log(answer2);
                 console.log(answer3);
                 console.log(answer4);
                 console.log(correct);
+                console.log(difficulty);
                 setQuestion(question)
                 setAnswer1(answer1)
                 setAnswer2(answer2)
                 setAnswer3(answer3)
                 setAnswer4(answer4)
                 setCorrectAnswer(correct)
-
-                // console.log(question);
-                // console.log(answer1);
-                // console.log(answer2);
-                // console.log(answer3);
-                // console.log(answer4);
-                // console.log(correctAnswer);
+                setDifficulty(difficulty)
 
             } else {
                 // doc.data() will be undefined in this case
@@ -96,18 +100,6 @@ export default function Questions() {
             console.log("Error getting document:", error);
         });
     }
-
-    // function ComponentModal() {
-    //     return <StageFinishModal />
-    // }
-
-    // function ShowModal() {
-    //     const show = activeModal
-
-    //     if (show) {
-    //         return <ComponentModal />
-    //     }
-    // }
 
     useEffect(() => {
         getQuestions()
@@ -121,7 +113,7 @@ export default function Questions() {
             )}
 
             <div className="contentQuestions">
-                <h1>{question}</h1>
+                <h1>{count <= 10 ? (count) : ('10')}. {question}</h1>
             </div>
             <div className="contentAnswers">
                 <div>
