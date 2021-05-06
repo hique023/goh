@@ -2,7 +2,7 @@
 import React from 'react'
 import TopBarPhase from '../TopBarPhase'
 import SubBar from '../SubBar'
-import StageLink from '../StageLink'
+import SubStage from '../SubStage'
 import QuizLink from '../QuizLink'
 
 // Assets
@@ -17,22 +17,15 @@ export default function Stage() {
         <div className="containerStage">
             <TopBarPhase name={`Olá, ${nameUser}`} color={color} />
 
-            <SubBar />
+            <SubBar color={color} />
 
             <div className="listStage">
 
-                <div className="contentStageLink">
-                    <div className="leftStageLink">
-                        {/* <BiChalkboard size={80} color="black" /> */}
-                        <h1>props.name</h1>
-                    </div>
-                    <h1>400 xp</h1>
-                </div>
-
-                {/* <QuizLink name="Etapa 1" stageId="etapa1" color={color} />
-                <StageLink name="Etapa 2" stageId="etapa2" color={color} />
-                <StageLink name="Etapa 3" stageId="etapa3" color={color} /> */}
+                <SubStage name="Nota de Qualidade" color={color} />
                 <QuizLink name="Quiz" stageId="etapa1" color={color} />
+                {/* <SubStage name="Nota de Treinamento" color={color} />
+                <SubStage name="Nota de Desafio Complementar" color={color} /> */}
+
             </div>
         </div>
     )

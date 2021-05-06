@@ -17,7 +17,7 @@ export default function Phase() {
 
             <TopBarPhase name={`Olá, ${nameUser}`} color={color} />
 
-            <SubBar />
+            <SubBar color={color} />
 
             <div className="listStage">
                 <StageLink name="Etapa 1" stageId="etapa1" color={color} />

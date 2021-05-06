@@ -4,13 +4,17 @@ import React from 'react'
 // Assets
 import './styles.css'
 
-export default function SubBar() {
+export default function SubBar(props) {
 
     // const phaseName = localStorage.getItem('phaseName')
     const subBarName = localStorage.getItem('subBarName')
 
+    const cardStyle = {
+        backgroundColor: props.color || 'var(--green-soft)'
+    }
+
     return (
-        <div className="phaseBar">
+        <div className="phaseBar" style={cardStyle}>
             <h1>{subBarName}</h1>
             <h1>100xp</h1>
         </div>
