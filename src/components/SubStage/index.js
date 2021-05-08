@@ -15,14 +15,20 @@ export default function SubStage(props) {
         <div className="containerSubStage" style={cardStyle}>
             <div className="contentSubStage">
                 <div className="leftSubStage">
-                    <BiChalkboard size={80} color="black" />
-                    <h1>{props.name}</h1>
-                    <h1>{props.name}</h1>
-                    <h1>{props.name}</h1>
+                    <div className="iconSubStage">
+                        <BiChalkboard size={80} color="black" />
+                    </div>
+                    <div className="totalScore">
+                        <h1>Nota de Qualidade</h1>
+                        <h1>Nota de Treinamento</h1>
+                        <h1>Desafio Complementar</h1>
+                    </div>
                 </div>
-                <h1>400 xp</h1>
-                <h1>400 xp</h1>
-                <h1>400 xp</h1>
+                <div className="rightSubBar">
+                    <h1>400 xp</h1>
+                    <h1>400 xp</h1>
+                    <h1>400 xp</h1>
+                </div>
             </div>
         </div>
     )

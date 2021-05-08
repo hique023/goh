@@ -21,7 +21,7 @@ export default function Stage() {
 
             <div className="listStage">
 
-                <SubStage name="Nota de Qualidade" color={color} />
+                <SubStage color={color} />
                 <QuizLink name="Quiz" stageId="etapa1" color={color} />
                 {/* <SubStage name="Nota de Treinamento" color={color} />
                 <SubStage name="Nota de Desafio Complementar" color={color} /> */}

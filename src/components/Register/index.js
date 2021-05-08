@@ -105,7 +105,7 @@ export default function Register() {
     };
 
     return (
-        <div className="container">
+        <div className="containerRegister">
             <div className="register-container">
 
                 <div className="content">

@@ -11,13 +11,14 @@ export default function Phase() {
 
     const color = localStorage.getItem('color')
     const nameUser = localStorage.getItem('nameUser')
+    const phaseName = localStorage.getItem('subBarName')
 
     return (
         <div className="containerPhase">
 
             <TopBarPhase name={`Olá, ${nameUser}`} color={color} />
 
-            <SubBar color={color} />
+            <SubBar name={phaseName} color={color} />
 
             <div className="listStage">
                 <StageLink name="Etapa 1" stageId="etapa1" color={color} />

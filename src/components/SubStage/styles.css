@@ -24,7 +24,7 @@
   transform: opacity 0.2s;
 }
 
-.contentSubStage:hover {
+.containerSubStage .contentSubStage:hover {
   opacity: 0.9;
 }
 
@@ -35,4 +35,12 @@
 
 .containerSubStage .contentSubStage .leftSubStage h1 {
   margin-left: 30px;
+}
+
+.containerSubStage .contentSubStage .leftSubStage h1 + h1 {
+  margin-top: 30px;
+}
+
+.containerSubStage .contentSubStage .rightSubBar h1 + h1 {
+  margin-top: 30px;
 }
