@@ -17,6 +17,10 @@
   align-items: center;
 }
 
+.topBarPhase .leftTopBarPhase h1 {
+  font: 25px "Press Start 2P", sans-serif;
+}
+
 .topBarPhase button {
   background-color: transparent;
   border: 0;

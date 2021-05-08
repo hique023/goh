@@ -12,3 +12,7 @@
   margin-top: 20px;
   opacity: 0.6;
 }
+
+.subBar h1 {
+  font: 25px "Press Start 2P", sans-serif;
+}
