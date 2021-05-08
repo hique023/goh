@@ -1,8 +1,9 @@
 // Global
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import firebase from '../../firebaseConfig.js'
 import StageFinishModal from '../StageFinishModal'
-import { useHistory } from 'react-router-dom'
+import QuizStartModal from '../QuizStartModal'
 
 // Assets
 import './styles.css'
@@ -19,6 +20,7 @@ export default function Questions() {
     const [difficulty, setDifficulty] = useState('')
     const [answerSelected, setAnswerSelected] = useState(null)
     const [count, setCount] = useState(1)
+    const [startQuiz, setStartQuiz] = useState(false)
     const color = localStorage.getItem('color')
     const phaseId = localStorage.getItem('phaseId')
     const stageId = localStorage.getItem('stageId')
@@ -30,10 +32,6 @@ export default function Questions() {
     }
 
     function nextQuestion() {
-        // setCount(count + 1)
-        // setAnswerSelected('')
-        // console.log(count);
-        // clearRadio()
 
         if (answerSelected != null) {
             setCount(count + 1)
@@ -101,6 +99,15 @@ export default function Questions() {
         });
     }
 
+    function startQuizModal() {
+        console.log('Start Quiz');
+        setStartQuiz(true)
+    }
+
+    function cancelQuizModal() {
+        history.goBack()
+    }
+
     useEffect(() => {
         getQuestions()
     }, [count])
@@ -108,13 +115,19 @@ export default function Questions() {
     return (
         <div className="containerQuestions">
 
+            {startQuiz === false && (
+                <QuizStartModal startQuiz={startQuizModal} cancelQuiz={cancelQuizModal} />
+            )}
+
             {count > 10 && (
                 <StageFinishModal />
             )}
 
+
             <div className="contentQuestions">
                 <h1>{count <= 10 ? (count) : ('10')}. {question}</h1>
             </div>
+
             <div className="contentAnswers">
                 <div>
                     <input

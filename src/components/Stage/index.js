@@ -1,5 +1,5 @@
 // Global
-import React from 'react'
+import React, { useState } from 'react'
 import TopBarPhase from '../TopBarPhase'
 import SubBar from '../SubBar'
 import SubStage from '../SubStage'
@@ -13,6 +13,8 @@ export default function Stage() {
     const color = localStorage.getItem('color')
     const nameUser = localStorage.getItem('nameUser')
 
+    const [activeModal, setActiveModal] = useState(false)
+
     return (
         <div className="containerStage">
             <TopBarPhase name={`Olá, ${nameUser}`} color={color} />
@@ -23,8 +25,6 @@ export default function Stage() {
 
                 <SubStage color={color} />
                 <QuizLink name="Quiz" stageId="etapa1" color={color} />
-                {/* <SubStage name="Nota de Treinamento" color={color} />
-                <SubStage name="Nota de Desafio Complementar" color={color} /> */}
 
             </div>
         </div>
