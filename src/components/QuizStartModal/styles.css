@@ -1,5 +1,6 @@
 .backgroundQuizStartModal {
-  background: rgba(242, 243, 245, 0.8);
+  /* background: rgba(89, 89, 89, 0.99); */
+  background: rgba(233, 233, 233, 0.693);
   position: fixed;
   top: 0;
   bottom: 0;

@@ -99,15 +99,6 @@ export default function Questions() {
         });
     }
 
-    function startQuizModal() {
-        console.log('Start Quiz');
-        setStartQuiz(true)
-    }
-
-    function cancelQuizModal() {
-        history.goBack()
-    }
-
     useEffect(() => {
         getQuestions()
     }, [count])
@@ -115,14 +106,9 @@ export default function Questions() {
     return (
         <div className="containerQuestions">
 
-            {startQuiz === false && (
-                <QuizStartModal startQuiz={startQuizModal} cancelQuiz={cancelQuizModal} />
-            )}
-
             {count > 10 && (
                 <StageFinishModal />
             )}
-
 
             <div className="contentQuestions">
                 <h1>{count <= 10 ? (count) : ('10')}. {question}</h1>

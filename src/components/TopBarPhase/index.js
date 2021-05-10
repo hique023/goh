@@ -13,6 +13,7 @@ export default function TopBarPhase(props) {
 
     function backLink() {
         history.goBack()
+        localStorage.setItem('timer', false)
     }
 
     const cardStyle = {

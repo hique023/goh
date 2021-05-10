@@ -27,7 +27,6 @@ export default function QuizStartModal(props) {
                 <div className="containerOptions">
                     <button type="button" className="buttonStart" onClick={start}>Sim</button>
                     <button type="button" className="buttonClose" onClick={cancel}>Não</button>
-                    {/* <button type="button" className="buttonClose">Não</button> */}
                 </div>
             </div>
         </div>

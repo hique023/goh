@@ -13,8 +13,6 @@ export default function Stage() {
     const color = localStorage.getItem('color')
     const nameUser = localStorage.getItem('nameUser')
 
-    const [activeModal, setActiveModal] = useState(false)
-
     return (
         <div className="containerStage">
             <TopBarPhase name={`Olá, ${nameUser}`} color={color} />

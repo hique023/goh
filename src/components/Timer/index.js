@@ -8,6 +8,7 @@ export default function Timer() {
 
     const intervalRef = useRef(null)
     const [timer, setTimer] = useState('00:00')
+    const [startQuiz, setStartQuiz] = useState(localStorage.getItem('timer'))
 
     function getTimerRemaining(endtime) {
         const total = Date.parse(endtime) - Date.parse(new Date())
