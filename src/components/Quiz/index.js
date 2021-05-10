@@ -18,13 +18,13 @@ export default function Quiz() {
 
     function startQuizModal() {
         console.log('Start Quiz');
-        localStorage.setItem('timer', true)
+        localStorage.setItem('startQuiz', true)
         setStartQuiz(true)
     }
 
     function cancelQuizModal() {
         history.goBack()
-        localStorage.setItem('timer', false)
+        localStorage.setItem('startQuiz', false)
     }
 
     return (
