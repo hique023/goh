@@ -1,5 +1,5 @@
 // Global
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 // Assets
@@ -9,6 +9,7 @@ import { BiChalkboard } from "react-icons/bi";
 export default function StageLink(props) {
 
     const history = useHistory()
+    const [statusStage, setStatusStage] = useState(true)
 
     function goStage() {
         localStorage.setItem('stageId', props.stageId)
@@ -20,10 +21,14 @@ export default function StageLink(props) {
         backgroundColor: props.color || 'var(--green-soft)'
     }
 
+    useEffect(() => {
+        setStatusStage(props.status)
+    }, [])
+
     return (
         <div className="containerStageLink" style={cardStyle}>
             <div className="contentStageLink">
-                <button onClick={goStage}>
+                <button onClick={goStage} id="buttonStage" disabled={props.status}>
                     <div className="leftStageLink">
                         <BiChalkboard size={80} color="black" />
                         <h1>{props.name}</h1>
