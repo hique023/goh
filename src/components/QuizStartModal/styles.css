@@ -39,6 +39,12 @@
   margin-bottom: 50px;
 }
 
+.backgroundQuizStartModal .containerQuizStartModal .containerHeader h2 {
+  margin-top: 20px;
+  color: var(--red);
+  font: 25px "Roboto", sans-serif;
+}
+
 .backgroundQuizStartModal .containerQuizStartModal .containerOptions {
   display: flex;
 }
