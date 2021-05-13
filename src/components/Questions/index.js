@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import firebase from '../../firebaseConfig.js'
 import StageFinishModal from '../StageFinishModal'
-import QuizStartModal from '../QuizStartModal'
 
 // Assets
 import './styles.css'
@@ -17,15 +16,16 @@ export default function Questions() {
     const [answer3, setAnswer3] = useState('')
     const [answer4, setAnswer4] = useState('')
     const [correctAnswer, setCorrectAnswer] = useState('')
-    const [difficulty, setDifficulty] = useState('')
+    const [questionDifficulty, setQuestionDifficulty] = useState(null)
     const [answerSelected, setAnswerSelected] = useState(null)
     const [count, setCount] = useState(1)
-    const [startQuiz, setStartQuiz] = useState(false)
+    const [score, setScore] = useState(0)
+
     const color = localStorage.getItem('color')
     const phaseId = localStorage.getItem('phaseId')
     const stageId = localStorage.getItem('stageId')
     const db = firebase.firestore();
-    const history = useHistory()
+    // const history = useHistory()
 
     const cardStyle = {
         backgroundColor: color || 'var(--green-soft)'
@@ -75,20 +75,47 @@ export default function Questions() {
                 const answer4 = pergunta[4]
                 const correct = pergunta[5]
                 const difficulty = pergunta[6]
+                let scoreQuestion = 0
                 console.log(question);
                 console.log(answer1);
                 console.log(answer2);
                 console.log(answer3);
                 console.log(answer4);
                 console.log(correct);
-                console.log(difficulty);
+                console.log(`Dificuldade: ${difficulty}`);
+                // console.log(`Score Question: ${scoreQuestion}`);
                 setQuestion(question)
                 setAnswer1(answer1)
                 setAnswer2(answer2)
                 setAnswer3(answer3)
                 setAnswer4(answer4)
                 setCorrectAnswer(correct)
-                setDifficulty(difficulty)
+                setQuestionDifficulty(difficulty)
+
+                console.log('----------------------------------');
+                console.log('variáveis globais');
+                console.log(question);
+                console.log(answer1);
+                console.log(answer2);
+                console.log(answer3);
+                console.log(answer4);
+                console.log(correct);
+                console.log(questionDifficulty);
+                console.log('----------------------------------');
+
+                if (difficulty === 'easy') {
+                    const easy = 1
+                    scoreQuestion = easy
+                    console.log(`Score question easy ${scoreQuestion}`);
+                } else if (difficulty === 'medium') {
+                    const medium = 3
+                    scoreQuestion = medium
+                    console.log(`Score question medium ${scoreQuestion}`);
+                } else if (difficulty === 'hard') {
+                    const hard = 6
+                    scoreQuestion = hard
+                    console.log(`Score question hard ${scoreQuestion}`);
+                }
 
             } else {
                 // doc.data() will be undefined in this case

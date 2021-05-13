@@ -9,7 +9,6 @@ import { BiChalkboard } from "react-icons/bi";
 export default function StageLink(props) {
 
     const history = useHistory()
-    const [statusStage, setStatusStage] = useState(true)
 
     function goStage() {
         localStorage.setItem('stageId', props.stageId)
@@ -20,10 +19,6 @@ export default function StageLink(props) {
     const cardStyle = {
         backgroundColor: props.color || 'var(--green-soft)'
     }
-
-    useEffect(() => {
-        setStatusStage(props.status)
-    }, [])
 
     return (
         <div className="containerStageLink" style={cardStyle}>
