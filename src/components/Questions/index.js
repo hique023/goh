@@ -38,6 +38,13 @@ export default function Questions() {
             setAnswerSelected(null)
             console.log(count);
             clearRadio()
+
+            if (answerSelected === correctAnswer) {
+                setScore(score)
+                alert(`Score total: ${score}`);
+            } else {
+                alert("Errou")
+            }
         }
 
     }
@@ -59,48 +66,48 @@ export default function Questions() {
                 setData(data)
 
                 console.log('-----------------------------');
-                console.log(count)
-                console.table("Document data:", data);
-                console.log('Document Status', data.status)
-                console.table("Document data:", data[1]);
+                // console.log(count)
+                // console.table("Document data:", data);
+                // console.table("Document data:", data[1]);
 
                 const pergunta = data[count]
                 console.table(pergunta)
-                console.log('-----------------------------');
+                // console.log('-----------------------------');
 
                 const question = pergunta[0]
-                const answer1 = pergunta[1]
-                const answer2 = pergunta[2]
-                const answer3 = pergunta[3]
-                const answer4 = pergunta[4]
+                const answer01 = pergunta[1]
+                const answer02 = pergunta[2]
+                const answer03 = pergunta[3]
+                const answer04 = pergunta[4]
                 const correct = pergunta[5]
                 const difficulty = pergunta[6]
                 let scoreQuestion = 0
-                console.log(question);
-                console.log(answer1);
-                console.log(answer2);
-                console.log(answer3);
-                console.log(answer4);
-                console.log(correct);
-                console.log(`Dificuldade: ${difficulty}`);
+                // console.log(question);
+                // console.log(answer1);
+                // console.log(answer2);
+                // console.log(answer3);
+                // console.log(answer4);
+                // console.log(correct);
+                // console.log(`Dificuldade: ${difficulty}`);
                 // console.log(`Score Question: ${scoreQuestion}`);
                 setQuestion(question)
-                setAnswer1(answer1)
-                setAnswer2(answer2)
-                setAnswer3(answer3)
-                setAnswer4(answer4)
+                setAnswer1(answer01)
+                setAnswer2(answer02)
+                setAnswer3(answer03)
+                setAnswer4(answer04)
                 setCorrectAnswer(correct)
                 setQuestionDifficulty(difficulty)
 
                 console.log('----------------------------------');
                 console.log('variáveis globais');
-                console.log(question);
-                console.log(answer1);
-                console.log(answer2);
-                console.log(answer3);
-                console.log(answer4);
-                console.log(correct);
-                console.log(questionDifficulty);
+                console.log(`Questão: ${question}`);
+                console.log(`1: ${answer01}`);
+                console.log(`2: ${answer02}`);
+                console.log(`3: ${answer03}`);
+                console.log(`4: ${answer04}`);
+                console.log(`Correta: ${correctAnswer}`);
+                console.log(`Dificuldade: ${questionDifficulty}`);
+                console.log(`Score: ${score}`);
                 console.log('----------------------------------');
 
                 if (difficulty === 'easy') {
