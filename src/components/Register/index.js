@@ -28,7 +28,8 @@ export default function Register() {
     function handleRegister(e) {
         e.preventDefault()
 
-        if (dominio[1] === dominioValidator && group === 'rc' || group === 'fidelizacao' || group === 'onboarding' && avatarUrl != null) {
+        // if (dominio[1] === dominioValidator && group === 'rc' || group === 'fidelizacao' || group === 'onboarding' && avatarUrl != null) {
+        if (dominio[1] === dominioValidator && group != null && avatarUrl != null) {
             console.log('Email válido')
             firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
@@ -191,8 +192,15 @@ export default function Register() {
                 .catch((error) => {
                     var errorCode = error.code;
                     var errorMessage = error.message;
+
+                    if (errorMessage === "Password should be at least 6 characters") {
+                        errorMessage = 'A senha deve conter no mínimo 6 caracteres.'
+                    }
+
                     alert(errorMessage)
                 });
+        } else if (dominio[1] !== dominioValidator) {
+            alert('Insira seu email corporativo!')
         } else {
             alert('Preencha todos os campos')
         }
