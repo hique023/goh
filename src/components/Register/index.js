@@ -50,6 +50,121 @@ export default function Register() {
                     console.log(password)
                     console.log(group)
 
+                    db.collection("score").doc(uid).set({
+                        scoreTotal: score,
+                        fase1: {
+                            etapa1: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa2: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa3: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa4: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                        },
+                        fase2: {
+                            etapa1: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa2: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa3: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa4: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                        },
+                        fase3: {
+                            etapa1: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa2: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa3: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa4: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                        },
+                        fase4: {
+                            etapa1: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa2: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa3: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                            etapa4: {
+                                qualidade: 0,
+                                treinamento: 0,
+                                desafio: 0,
+                                quiz: 0
+                            },
+                        },
+                    }, { merge: true })
+                        .then((docRef) => {
+
+                        })
+                        .catch((error) => {
+                            // console.error("Error adding document: ", error);
+                            console.log('Erro ao cadastrar score do usuário!')
+                        });
+
                     db.collection("users").doc(uid).set({
                         name: name,
                         firstName: firstName[0],
