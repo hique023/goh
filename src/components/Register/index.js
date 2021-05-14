@@ -229,6 +229,9 @@ export default function Register() {
                         <h1>Cadastro</h1>
                         <p>Faça seu cadastro, entre na plataforma e aproveite o que temos a oferecer!</p>
 
+                        <p className="atentionInputs">Todos os campos são obrigatórios para realizar o cadastro, incluindo a foto do heroi!</p>
+                        <p className="atentionPassword">A senha deve conter no mínimo 6 caracteres.</p>
+
                         <Link className="back-link" to="/">
                             <FiArrowLeft size={16} color="#e02041" />
                             Já tenho cadastro
