@@ -22,7 +22,7 @@ export default function QuizStartModal(props) {
             <div className="containerQuizStartModal">
                 <div className="containerHeader">
                     <header>Deseja iniciar o Quiz?</header>
-                    <h2>Você terá apenas uma chance, verifique sua conexão com a internet e reserve 10min para a realização do quiz!</h2>
+                    <h2>Você terá apenas uma chance, verifique sua conexão com a internet e reserve 10min para a realização do quiz. Ao todo são 10 questões com níveis de dificuldade diferentes.</h2>
                 </div>
 
                 <div className="containerOptions">
