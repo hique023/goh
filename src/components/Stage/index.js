@@ -21,8 +21,8 @@ export default function Stage() {
 
             <div className="listStage">
 
-                <SubStage color={color} />
-                <QuizLink name="Quiz" stageId="etapa1" color={color} />
+                <SubStage color={color} qualidade={10} treinamento={5} desafio={8} />
+                <QuizLink name="Quiz" stageId="etapa1" color={color} quizScore={20} />
 
             </div>
         </div>

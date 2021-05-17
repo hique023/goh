@@ -77,10 +77,6 @@ export default function Phase() {
             <SubBar name={phaseName} color={color} />
 
             <div className="listStage">
-                {statusStage1}
-                {statusStage2}
-                {statusStage3}
-                {statusStage4}
                 <StageLink name="Etapa 1" stageId="etapa1" color={color} status={statusStage1} />
                 <StageLink name="Etapa 2" stageId="etapa2" color={color} status={statusStage2} />
                 <StageLink name="Etapa 3" stageId="etapa3" color={color} status={statusStage3} />

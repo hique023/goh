@@ -1,5 +1,5 @@
 // Global
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Assets
 import './styles.css'
@@ -7,9 +7,23 @@ import { BiChalkboard } from "react-icons/bi";
 
 export default function SubStage(props) {
 
+    const [qualidade, setQualidade] = useState(0)
+    const [treinamento, setTreinamento] = useState(0)
+    const [desafio, setDesafio] = useState(0)
+
+    function getScore() {
+        setQualidade(props.qualidade)
+        setTreinamento(props.treinamento)
+        setDesafio(props.desafio)
+    }
+
     const cardStyle = {
         backgroundColor: props.color || 'var(--green-soft)'
     }
+
+    useEffect(() => {
+        getScore()
+    }, [])
 
     return (
         <div className="containerSubStage" style={cardStyle}>
@@ -25,9 +39,9 @@ export default function SubStage(props) {
                     </div>
                 </div>
                 <div className="rightSubBar">
-                    <h1>400 xp</h1>
-                    <h1>400 xp</h1>
-                    <h1>400 xp</h1>
+                    <h1>{qualidade} xp</h1>
+                    <h1>{treinamento} xp</h1>
+                    <h1>{desafio} xp</h1>
                 </div>
             </div>
         </div>

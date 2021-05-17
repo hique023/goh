@@ -1,5 +1,5 @@
 // Global
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 // Assets
@@ -8,7 +8,12 @@ import { BiChalkboard } from "react-icons/bi";
 
 export default function QuizLink(props) {
 
+    const [quizScore, setQuizScore] = useState(0)
     const history = useHistory()
+
+    function getScore() {
+        setQuizScore(props.quizScore)
+    }
 
     function goQuiz() {
         history.push('/quiz')
@@ -18,6 +23,10 @@ export default function QuizLink(props) {
         backgroundColor: props.color || 'var(--green-soft)'
     }
 
+    useEffect(() => {
+        getScore()
+    }, [])
+
     return (
         <div className="containerQuizLink" style={cardStyle}>
             <div className="contentQuizLink">
@@ -26,7 +35,7 @@ export default function QuizLink(props) {
                         <BiChalkboard size={80} color="black" />
                         <h1>{props.name}</h1>
                     </div>
-                    <h1>400 xp</h1>
+                    <h1>{quizScore} xp</h1>
                 </button>
             </div>
         </div>
