@@ -32,6 +32,7 @@ export default function Logon() {
             .then((userCredential) => {
                 var userUid = userCredential.user.uid
                 console.log(userUid)
+                localStorage.setItem('userUid', userUid)
                 localStorage.setItem('isLogged', true)
 
                 db.collection('users').doc(userUid).get().then((doc) => {

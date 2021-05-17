@@ -8,12 +8,12 @@ import { BiChalkboard } from "react-icons/bi";
 
 export default function QuizLink(props) {
 
-    const [quizScore, setQuizScore] = useState(0)
+    // const [quizScore, setQuizScore] = useState(0)
     const history = useHistory()
 
-    function getScore() {
-        setQuizScore(props.quizScore)
-    }
+    // function getScore() {
+    //     setQuizScore(props.quizScore)
+    // }
 
     function goQuiz() {
         history.push('/quiz')
@@ -23,9 +23,9 @@ export default function QuizLink(props) {
         backgroundColor: props.color || 'var(--green-soft)'
     }
 
-    useEffect(() => {
-        getScore()
-    }, [])
+    // useEffect(() => {
+    //     getScore()
+    // }, [])
 
     return (
         <div className="containerQuizLink" style={cardStyle}>
@@ -35,7 +35,7 @@ export default function QuizLink(props) {
                         <BiChalkboard size={80} color="black" />
                         <h1>{props.name}</h1>
                     </div>
-                    <h1>{quizScore} xp</h1>
+                    <h1>{props.quizScore} xp</h1>
                 </button>
             </div>
         </div>
