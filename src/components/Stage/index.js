@@ -15,6 +15,7 @@ export default function Stage() {
     const [treinamento, setTreinamento] = useState(0)
     const [desafio, setDesafio] = useState(0)
     const [quiz, setQuiz] = useState(0)
+    const [scoreBar, setScoreBar] = useState(0)
 
     const [data, setData] = useState()
     const color = localStorage.getItem('color')
@@ -24,14 +25,10 @@ export default function Stage() {
     const userUid = localStorage.getItem('userUid')
     const db = firebase.firestore();
 
+
     async function getScore() {
 
         var docRef = db.collection('score').doc(userUid);
-
-        // const collections = await docRef.listCollections();
-        // collections.forEach(collection => {
-        //     console.log('Found subcollection with id:', collection.id);
-        // });
 
         docRef.get().then((doc) => {
             if (doc.exists) {
@@ -57,6 +54,10 @@ export default function Stage() {
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
 
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
                         console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase1.etapa2.qualidade
@@ -75,6 +76,10 @@ export default function Stage() {
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
 
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
                         console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
                         const qualidadeScore = data.fase1.etapa3.qualidade
@@ -92,6 +97,12 @@ export default function Stage() {
                         const quizScore = data.fase1.etapa3.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase1.etapa4.qualidade
                         setQualidade(qualidadeScore)
@@ -108,6 +119,12 @@ export default function Stage() {
                         const quizScore = data.fase1.etapa4.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 4");
                     }
                     console.log(`Fase1: ${data.fase1.etapa1}`);
                 } else if (phaseId === 'fase2') {
@@ -127,6 +144,12 @@ export default function Stage() {
                         const quizScore = data.fase2.etapa1.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase2.etapa2.qualidade
                         setQualidade(qualidadeScore)
@@ -143,6 +166,12 @@ export default function Stage() {
                         const quizScore = data.fase2.etapa2.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
                         const qualidadeScore = data.fase2.etapa3.qualidade
                         setQualidade(qualidadeScore)
@@ -159,6 +188,12 @@ export default function Stage() {
                         const quizScore = data.fase2.etapa3.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase2.etapa4.qualidade
                         setQualidade(qualidadeScore)
@@ -175,6 +210,12 @@ export default function Stage() {
                         const quizScore = data.fase2.etapa4.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 4");
                     }
                     console.log(`Fase2: ${data.fase2}`);
                 } else if (phaseId === 'fase3') {
@@ -194,6 +235,12 @@ export default function Stage() {
                         const quizScore = data.fase3.etapa1.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase3.etapa2.qualidade
                         setQualidade(qualidadeScore)
@@ -210,6 +257,12 @@ export default function Stage() {
                         const quizScore = data.fase3.etapa2.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
                         const qualidadeScore = data.fase3.etapa3.qualidade
                         setQualidade(qualidadeScore)
@@ -226,6 +279,12 @@ export default function Stage() {
                         const quizScore = data.fase3.etapa3.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase3.etapa4.qualidade
                         setQualidade(qualidadeScore)
@@ -242,6 +301,12 @@ export default function Stage() {
                         const quizScore = data.fase3.etapa4.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 4");
                     }
                     console.log(`Fase3: ${data.fase3}`);
                 } else if (phaseId === 'fase4') {
@@ -261,6 +326,12 @@ export default function Stage() {
                         const quizScore = data.fase4.etapa1.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase4.etapa2.qualidade
                         setQualidade(qualidadeScore)
@@ -277,6 +348,12 @@ export default function Stage() {
                         const quizScore = data.fase4.etapa2.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
                         const qualidadeScore = data.fase4.etapa3.qualidade
                         setQualidade(qualidadeScore)
@@ -293,6 +370,12 @@ export default function Stage() {
                         const quizScore = data.fase4.etapa3.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase4.etapa4.qualidade
                         setQualidade(qualidadeScore)
@@ -309,6 +392,12 @@ export default function Stage() {
                         const quizScore = data.fase4.etapa4.quiz
                         setQuiz(quizScore)
                         console.log(`Quiz Score ${quizScore}`);
+
+                        const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
+                        setScoreBar(totalScoreBar)
+                        console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        console.log("Etapa 4");
                     }
                     console.log(`Fase4: ${data.fase4}`);
                 }
@@ -324,16 +413,17 @@ export default function Stage() {
 
     useEffect(() => {
         getScore()
+        // getScoreBar()
     }, [])
 
     return (
         <div className="containerStage">
             <TopBarPhase name={`Olá, ${nameUser}`} color={color} />
 
-            <SubBar color={color} />
+
+            <SubBar color={color} score={scoreBar} />
 
             <div className="listStage">
-                {userUid}
 
                 <SubStage color={color} qualidade={qualidade} treinamento={treinamento} desafio={desafio} />
                 <QuizLink name="Quiz" stageId="etapa1" color={color} quizScore={quiz} />
