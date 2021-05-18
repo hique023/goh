@@ -58,6 +58,22 @@ export default function Stage() {
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
 
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase1: {
+                                etapa1: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
                         console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase1.etapa2.qualidade
@@ -79,6 +95,22 @@ export default function Stage() {
                         const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase1: {
+                                etapa2: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
 
                         console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
@@ -102,6 +134,22 @@ export default function Stage() {
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
 
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase1: {
+                                etapa3: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
                         console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase1.etapa4.qualidade
@@ -123,6 +171,22 @@ export default function Stage() {
                         const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase1: {
+                                etapa4: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
 
                         console.log("Etapa 4");
                     }
@@ -149,6 +213,22 @@ export default function Stage() {
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
 
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase2: {
+                                etapa1: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
                         console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase2.etapa2.qualidade
@@ -170,6 +250,22 @@ export default function Stage() {
                         const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase2: {
+                                etapa2: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
 
                         console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
@@ -193,6 +289,22 @@ export default function Stage() {
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
 
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase2: {
+                                etapa3: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
                         console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase2.etapa4.qualidade
@@ -214,6 +326,22 @@ export default function Stage() {
                         const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase2: {
+                                etapa4: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
 
                         console.log("Etapa 4");
                     }
@@ -240,6 +368,22 @@ export default function Stage() {
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
 
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase3: {
+                                etapa1: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
                         console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase3.etapa2.qualidade
@@ -261,6 +405,22 @@ export default function Stage() {
                         const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase3: {
+                                etapa2: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
 
                         console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
@@ -284,6 +444,22 @@ export default function Stage() {
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
 
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase3: {
+                                etapa3: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
                         console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase3.etapa4.qualidade
@@ -305,6 +481,22 @@ export default function Stage() {
                         const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase3: {
+                                etapa4: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
 
                         console.log("Etapa 4");
                     }
@@ -331,6 +523,22 @@ export default function Stage() {
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
 
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase4: {
+                                etapa1: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
                         console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase4.etapa2.qualidade
@@ -352,6 +560,22 @@ export default function Stage() {
                         const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase4: {
+                                etapa2: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
 
                         console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
@@ -375,6 +599,22 @@ export default function Stage() {
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
 
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase4: {
+                                etapa3: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
                         console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase4.etapa4.qualidade
@@ -396,6 +636,22 @@ export default function Stage() {
                         const totalScoreBar = qualidadeScore + treinamentoScore + desafioScore + quizScore
                         setScoreBar(totalScoreBar)
                         console.log(`Total Score Bar: ${totalScoreBar}`);
+
+                        db.collection("score").doc(userUid).set({
+                            // scoreTotal: score,
+                            fase4: {
+                                etapa4: {
+                                    totalEtapa: totalScoreBar
+                                }
+                            }
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
 
                         console.log("Etapa 4");
                     }

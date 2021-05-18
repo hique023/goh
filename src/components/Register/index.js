@@ -58,104 +58,124 @@ export default function Register() {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa2: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa3: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa4: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
+                            totalFase: 0
                         },
                         fase2: {
                             etapa1: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa2: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa3: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa4: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
+                            totalFase: 0
                         },
                         fase3: {
                             etapa1: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa2: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa3: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa4: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
+                            totalFase: 0
                         },
                         fase4: {
                             etapa1: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa2: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa3: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
                             etapa4: {
                                 qualidade: 0,
                                 treinamento: 0,
                                 desafio: 0,
-                                quiz: 0
+                                quiz: 0,
+                                totalEtapa: 0
                             },
+                            totalFase: 0
                         },
                     }, { merge: true })
                         .then((docRef) => {
