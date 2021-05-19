@@ -12,7 +12,7 @@ export default function Phase() {
 
     const color = localStorage.getItem('color')
     const nameUser = localStorage.getItem('nameUser')
-    const phaseName = localStorage.getItem('subBarName')
+    const phaseName = localStorage.getItem('phaseName')
     const userUid = localStorage.getItem('userUid')
 
     const phaseId = localStorage.getItem('phaseId')
@@ -23,26 +23,6 @@ export default function Phase() {
     const [statusStage4, setStatusStage4] = useState(null)
 
     const [scoreSubBar, setScoreSubBar] = useState(0)
-
-    const [fase1Etapa1, setFase1Etapa1] = useState(0)
-    const [fase1Etapa2, setFase1Etapa2] = useState(0)
-    const [fase1Etapa3, setFase1Etapa3] = useState(0)
-    const [fase1Etapa4, setFase1Etapa4] = useState(0)
-
-    const [fase2Etapa1, setFase2Etapa1] = useState(0)
-    const [fase2Etapa2, setFase2Etapa2] = useState(0)
-    const [fase2Etapa3, setFase2Etapa3] = useState(0)
-    const [fase2Etapa4, setFase2Etapa4] = useState(0)
-
-    const [fase3Etapa1, setFase3Etapa1] = useState(0)
-    const [fase3Etapa2, setFase3Etapa2] = useState(0)
-    const [fase3Etapa3, setFase3Etapa3] = useState(0)
-    const [fase3Etapa4, setFase3Etapa4] = useState(0)
-
-    const [fase4Etapa1, setFase4Etapa1] = useState(0)
-    const [fase4Etapa2, setFase4Etapa2] = useState(0)
-    const [fase4Etapa3, setFase4Etapa3] = useState(0)
-    const [fase4Etapa4, setFase4Etapa4] = useState(0)
 
     const [totalEtapa1, setTotalEtapa1] = useState(0)
     const [totalEtapa2, setTotalEtapa2] = useState(0)

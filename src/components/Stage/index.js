@@ -676,7 +676,6 @@ export default function Stage() {
         <div className="containerStage">
             <TopBarPhase name={`Olá, ${nameUser}`} color={color} />
 
-
             <SubBar color={color} score={scoreBar} />
 
             <div className="listStage">
