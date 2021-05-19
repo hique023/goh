@@ -9,6 +9,7 @@ import { BiChalkboard } from "react-icons/bi";
 export default function StageLink(props) {
 
     const history = useHistory()
+    const [score, setScore] = useState(0)
 
     function goStage() {
         localStorage.setItem('stageId', props.stageId)
@@ -28,7 +29,7 @@ export default function StageLink(props) {
                         <BiChalkboard size={80} color="black" />
                         <h1>{props.name}</h1>
                     </div>
-                    <h1>400 xp</h1>
+                    <h1>{score} xp</h1>
                 </button>
             </div>
         </div>
