@@ -20,10 +20,8 @@ export default function Phase() {
     const [statusStage2, setStatusStage2] = useState(null)
     const [statusStage3, setStatusStage3] = useState(null)
     const [statusStage4, setStatusStage4] = useState(null)
-    // const [stageId, setStageId] = useState(null)
-
     const db = firebase.firestore();
-
+    // const [stageId, setStageId] = useState(null)
 
     function getStatus() {
 
