@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 // Assets
 import './styles.css'
-import { BiChalkboard } from "react-icons/bi";
+import { GrScorecard } from "react-icons/gr";
 
 export default function SubStage(props) {
 
@@ -30,7 +30,7 @@ export default function SubStage(props) {
             <div className="contentSubStage">
                 <div className="leftSubStage">
                     <div className="iconSubStage">
-                        <BiChalkboard size={80} color="black" />
+                        <GrScorecard size={80} color="black" />
                     </div>
                     <div className="totalScore">
                         <h1>Nota de Qualidade</h1>

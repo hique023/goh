@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 
 // Assets
 import './styles.css'
-import { BiChalkboard } from "react-icons/bi";
+import { FiEdit } from "react-icons/fi";
 
 export default function QuizLink(props) {
 
@@ -32,7 +32,7 @@ export default function QuizLink(props) {
             <div className="contentQuizLink">
                 <button onClick={goQuiz}>
                     <div className="leftQuizLink">
-                        <BiChalkboard size={80} color="black" />
+                        <FiEdit size={80} color="black" />
                         <h1>{props.name}</h1>
                     </div>
                     <h1>{props.quizScore} xp</h1>
