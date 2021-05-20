@@ -27,11 +27,11 @@ export default function StageLink(props) {
                     <div className="leftStageLink">
 
                         {props.status === true && (
-                            <GiPadlock size={80} color="black" />
+                            <GiPadlock size={80} color="var(--stage-block)" />
                         )}
 
                         {props.status === false && (
-                            <GiPadlockOpen size={80} color="black" />
+                            <GiPadlockOpen size={80} color="var(--green)" />
                         )}
 
                         <h1>{props.name}</h1>
