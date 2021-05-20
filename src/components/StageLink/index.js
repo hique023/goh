@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 
 // Assets
 import './styles.css'
-import { BiChalkboard } from "react-icons/bi";
+import { GiPadlockOpen, GiPadlock } from "react-icons/gi";
 
 export default function StageLink(props) {
 
@@ -25,7 +25,15 @@ export default function StageLink(props) {
             <div className="contentStageLink">
                 <button onClick={goStage} id="buttonStage" disabled={props.status}>
                     <div className="leftStageLink">
-                        <BiChalkboard size={80} color="black" />
+
+                        {props.status === true && (
+                            <GiPadlock size={80} color="black" />
+                        )}
+
+                        {props.status === false && (
+                            <GiPadlockOpen size={80} color="black" />
+                        )}
+
                         <h1>{props.name}</h1>
                     </div>
                     <h1>{props.score} xp</h1>
