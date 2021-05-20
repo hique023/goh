@@ -9,6 +9,7 @@ import { AiOutlineClose } from "react-icons/ai"
 export default function StageFinishModal() {
 
     const history = useHistory()
+    const score = localStorage.getItem('scoreQuiz')
 
     function closeModal() {
         history.goBack()
@@ -18,7 +19,7 @@ export default function StageFinishModal() {
         <div className="overlay">
             <div className="container">
                 <div className="containerHeader">
-                    <header>150xp</header>
+                    <header>{score} xp</header>
                 </div>
 
                 <div className="containerContent">

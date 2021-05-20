@@ -16,7 +16,7 @@ export default function Questions() {
     const [answer3, setAnswer3] = useState('')
     const [answer4, setAnswer4] = useState('')
     const [correctAnswer, setCorrectAnswer] = useState('')
-    const [questionDifficulty, setQuestionDifficulty] = useState(null)
+    const [questionDifficulty, setQuestionDifficulty] = useState(0)
     const [answerSelected, setAnswerSelected] = useState(null)
     const [count, setCount] = useState(1)
     const [score, setScore] = useState(0)
@@ -40,10 +40,7 @@ export default function Questions() {
             clearRadio()
 
             if (answerSelected === correctAnswer) {
-                setScore(score)
-                alert(`Score total: ${score}`);
-            } else {
-                alert("Errou")
+                setScore(score + questionDifficulty)
             }
         }
 
@@ -110,19 +107,19 @@ export default function Questions() {
                 console.log(`Score: ${score}`);
                 console.log('----------------------------------');
 
-                if (difficulty === 'easy') {
-                    const easy = 1
-                    scoreQuestion = easy
-                    console.log(`Score question easy ${scoreQuestion}`);
-                } else if (difficulty === 'medium') {
-                    const medium = 3
-                    scoreQuestion = medium
-                    console.log(`Score question medium ${scoreQuestion}`);
-                } else if (difficulty === 'hard') {
-                    const hard = 6
-                    scoreQuestion = hard
-                    console.log(`Score question hard ${scoreQuestion}`);
-                }
+                // if (difficulty === 'easy') {
+                //     const easy = 1
+                //     scoreQuestion = easy
+                //     console.log(`Score question easy ${scoreQuestion}`);
+                // } else if (difficulty === 'medium') {
+                //     const medium = 3
+                //     scoreQuestion = medium
+                //     console.log(`Score question medium ${scoreQuestion}`);
+                // } else if (difficulty === 'hard') {
+                //     const hard = 6
+                //     scoreQuestion = hard
+                //     console.log(`Score question hard ${scoreQuestion}`);
+                // }
 
             } else {
                 // doc.data() will be undefined in this case
@@ -135,6 +132,7 @@ export default function Questions() {
 
     useEffect(() => {
         getQuestions()
+        localStorage.setItem('scoreQuiz', score)
     }, [count])
 
     return (
