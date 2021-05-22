@@ -30,7 +30,7 @@ export default function QuizLink(props) {
     return (
         <div className="containerQuizLink" style={cardStyle}>
             <div className="contentQuizLink">
-                <button onClick={goQuiz}>
+                <button onClick={goQuiz} disabled={props.statusQuiz}>
                     <div className="leftQuizLink">
                         <FiEdit size={80} color="black" />
                         <h1>{props.name}</h1>

@@ -16,7 +16,7 @@ export default function Stage() {
     const [desafio, setDesafio] = useState(0)
     const [quiz, setQuiz] = useState(0)
     const [scoreBar, setScoreBar] = useState(0)
-    // const [quizStatus, setQuizStatus] = useState()
+    const [quizStatus, setQuizStatus] = useState()
 
     const [data, setData] = useState()
     const color = localStorage.getItem('color')
@@ -75,6 +75,21 @@ export default function Stage() {
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
 
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase1.etapa1
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
+
                         console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase1.etapa2.qualidade
@@ -112,6 +127,21 @@ export default function Stage() {
                                 // console.error("Error adding document: ", error);
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
+
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase1.etapa2
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
 
                         console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
@@ -151,6 +181,21 @@ export default function Stage() {
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
 
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase1.etapa3
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
+
                         console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase1.etapa4.qualidade
@@ -188,6 +233,21 @@ export default function Stage() {
                                 // console.error("Error adding document: ", error);
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
+
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase1.etapa4
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
 
                         console.log("Etapa 4");
                     }
@@ -230,6 +290,21 @@ export default function Stage() {
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
 
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase2.etapa1
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
+
                         console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase2.etapa2.qualidade
@@ -267,6 +342,21 @@ export default function Stage() {
                                 // console.error("Error adding document: ", error);
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
+
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase2.etapa2
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
 
                         console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
@@ -306,6 +396,21 @@ export default function Stage() {
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
 
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase2.etapa3
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
+
                         console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase2.etapa4.qualidade
@@ -343,6 +448,21 @@ export default function Stage() {
                                 // console.error("Error adding document: ", error);
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
+
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase2.etapa4
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
 
                         console.log("Etapa 4");
                     }
@@ -385,6 +505,21 @@ export default function Stage() {
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
 
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase3.etapa1
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
+
                         console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase3.etapa2.qualidade
@@ -422,6 +557,21 @@ export default function Stage() {
                                 // console.error("Error adding document: ", error);
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
+
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase3.etapa2
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
 
                         console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
@@ -461,6 +611,21 @@ export default function Stage() {
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
 
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase3.etapa3
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
+
                         console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase3.etapa4.qualidade
@@ -498,6 +663,21 @@ export default function Stage() {
                                 // console.error("Error adding document: ", error);
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
+
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase3.etapa4
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
 
                         console.log("Etapa 4");
                     }
@@ -540,6 +720,21 @@ export default function Stage() {
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
 
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase4.etapa1
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
+
                         console.log("Etapa 1");
                     } else if (stageId === 'etapa2') {
                         const qualidadeScore = data.fase4.etapa2.qualidade
@@ -577,6 +772,21 @@ export default function Stage() {
                                 // console.error("Error adding document: ", error);
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
+
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase4.etapa2
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
 
                         console.log("Etapa 2");
                     } else if (stageId === 'etapa3') {
@@ -616,6 +826,21 @@ export default function Stage() {
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
 
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase4.etapa3
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
+
                         console.log("Etapa 3");
                     } else if (stageId === 'etapa4') {
                         const qualidadeScore = data.fase4.etapa4.qualidade
@@ -654,6 +879,21 @@ export default function Stage() {
                                 console.log('Erro ao cadastrar score do usuário!')
                             });
 
+                        db.collection("quizFinish").doc(userUid).get().then((doc) => {
+                            if (doc.exists) {
+                                const data = doc.data()
+                                setData(data)
+
+                                const statusQuizDb = data.fase4.etapa4
+                                setQuizStatus(statusQuizDb)
+                            } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
+
                         console.log("Etapa 4");
                     }
                     console.log(`Fase4: ${data.fase4}`);
@@ -682,7 +922,7 @@ export default function Stage() {
             <div className="listStage">
 
                 <SubStage color={color} qualidade={qualidade} treinamento={treinamento} desafio={desafio} />
-                <QuizLink name="Quiz" stageId="etapa1" color={color} quizScore={quiz} />
+                <QuizLink name="Quiz" stageId="etapa1" color={color} quizScore={quiz} statusQuiz={quizStatus} />
 
             </div>
         </div>
