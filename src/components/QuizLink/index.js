@@ -32,8 +32,19 @@ export default function QuizLink(props) {
             <div className="contentQuizLink">
                 <button onClick={goQuiz} disabled={props.statusQuiz}>
                     <div className="leftQuizLink">
-                        <FiEdit size={80} color="black" />
-                        <h1>{props.name}</h1>
+
+                        {props.statusQuiz === false ? (
+                            <FiEdit size={80} color="var(--green-soft)" />
+                        ) : (
+                            <FiEdit size={80} color="var(--block)" />
+                        )}
+
+                        {props.statusQuiz === false ? (
+                            <h1>{props.name} Pendente</h1>
+                        ) : (
+                            <h1>{props.name} Respondido</h1>
+                        )}
+
                     </div>
                     <h1>{props.quizScore} xp</h1>
                 </button>
