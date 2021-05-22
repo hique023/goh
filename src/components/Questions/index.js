@@ -24,6 +24,7 @@ export default function Questions() {
     const color = localStorage.getItem('color')
     const phaseId = localStorage.getItem('phaseId')
     const stageId = localStorage.getItem('stageId')
+    const uid = localStorage.getItem('userUid')
     const db = firebase.firestore();
     // const history = useHistory()
 
@@ -41,6 +42,288 @@ export default function Questions() {
 
             if (answerSelected === correctAnswer) {
                 setScore(score + questionDifficulty)
+
+                if (phaseId === 'fase1') {
+                    if (stageId === 'etapa1') {
+
+                        db.collection("score").doc(uid).set({
+                            fase1: {
+                                etapa1: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa2') {
+
+                        db.collection("score").doc(uid).set({
+                            fase1: {
+                                etapa2: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa3') {
+
+                        db.collection("score").doc(uid).set({
+                            fase1: {
+                                etapa3: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa4') {
+
+                        db.collection("score").doc(uid).set({
+                            fase1: {
+                                etapa4: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    }
+                } else if (phaseId === 'fase2') {
+                    if (stageId === 'etapa1') {
+
+                        db.collection("score").doc(uid).set({
+                            fase2: {
+                                etapa1: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa2') {
+
+                        db.collection("score").doc(uid).set({
+                            fase2: {
+                                etapa2: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa3') {
+
+                        db.collection("score").doc(uid).set({
+                            fase2: {
+                                etapa3: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa4') {
+
+                        db.collection("score").doc(uid).set({
+                            fase2: {
+                                etapa4: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    }
+                } else if (phaseId === 'fase3') {
+                    if (stageId === 'etapa1') {
+
+                        db.collection("score").doc(uid).set({
+                            fase3: {
+                                etapa1: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa2') {
+
+                        db.collection("score").doc(uid).set({
+                            fase3: {
+                                etapa2: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa3') {
+
+                        db.collection("score").doc(uid).set({
+                            fase3: {
+                                etapa3: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa4') {
+
+                        db.collection("score").doc(uid).set({
+                            fase3: {
+                                etapa4: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    }
+                } else if (phaseId === 'fase4') {
+                    if (stageId === 'etapa1') {
+
+                        db.collection("score").doc(uid).set({
+                            fase4: {
+                                etapa1: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa2') {
+
+                        db.collection("score").doc(uid).set({
+                            fase4: {
+                                etapa2: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa3') {
+
+                        db.collection("score").doc(uid).set({
+                            fase4: {
+                                etapa3: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    } else if (stageId === 'etapa4') {
+
+                        db.collection("score").doc(uid).set({
+                            fase4: {
+                                etapa4: {
+                                    quiz: score + questionDifficulty
+                                }
+                            },
+                        }, { merge: true })
+                            .then((docRef) => {
+
+                            })
+                            .catch((error) => {
+                                // console.error("Error adding document: ", error);
+                                console.log('Erro ao cadastrar score do usuário!')
+                            });
+
+                    }
+                }
             }
         }
 
@@ -190,6 +473,8 @@ export default function Questions() {
             </div>
 
             <h3>Resposta selecionada: {answerSelected}</h3>
+
+            <h1>{score}</h1>
 
             {count < 10 ? (
                 <div className="buttonsQuestions">
