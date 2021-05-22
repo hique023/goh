@@ -16,6 +16,7 @@ export default function Stage() {
     const [desafio, setDesafio] = useState(0)
     const [quiz, setQuiz] = useState(0)
     const [scoreBar, setScoreBar] = useState(0)
+    // const [quizStatus, setQuizStatus] = useState()
 
     const [data, setData] = useState()
     const color = localStorage.getItem('color')
