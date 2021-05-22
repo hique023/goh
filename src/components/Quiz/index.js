@@ -38,7 +38,7 @@ export default function Quiz() {
                 (
                     <div>
 
-                        <TopBar name={`Olá, ${nameUser}`} color={color} />
+                        <TopBar name={`Olá, ${nameUser}`} color={color} quiz={true} />
 
                         <div className="timerStage">
                             <Timer />

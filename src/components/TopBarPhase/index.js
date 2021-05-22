@@ -23,9 +23,13 @@ export default function TopBarPhase(props) {
     return (
         <div className="topBarPhase" style={cardStyle}>
             <div className="leftTopBarPhase" style={cardStyle}>
-                <button onClick={backLink} className="back-link">
-                    <IoArrowBack size={30} color="white" />
-                </button>
+
+                {props.quiz !== true && (
+                    <button onClick={backLink} className="back-link">
+                        <IoArrowBack size={30} color="white" />
+                    </button>
+                )}
+
                 <h1>{props.name}!</h1>
             </div>
             {/* <div className="rightTopBarPhase">
