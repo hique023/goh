@@ -186,6 +186,40 @@ export default function Register() {
                             console.log('Erro ao cadastrar score do usuário!')
                         });
 
+                    db.collection("quizFinish").doc(uid).set({
+                        fase1: {
+                            etapa1: false,
+                            etapa2: false,
+                            etapa3: false,
+                            etapa4: false,
+                        },
+                        fase2: {
+                            etapa1: false,
+                            etapa2: false,
+                            etapa3: false,
+                            etapa4: false,
+                        },
+                        fase3: {
+                            etapa1: false,
+                            etapa2: false,
+                            etapa3: false,
+                            etapa4: false,
+                        },
+                        fase4: {
+                            etapa1: false,
+                            etapa2: false,
+                            etapa3: false,
+                            etapa4: false,
+                        },
+                    }, { merge: true })
+                        .then((docRef) => {
+
+                        })
+                        .catch((error) => {
+                            // console.error("Error adding document: ", error);
+                            console.log('Erro ao cadastrar score do usuário!')
+                        });
+
                     db.collection("users").doc(uid).set({
                         name: name,
                         firstName: firstName[0],
@@ -201,6 +235,7 @@ export default function Register() {
                             localStorage.setItem('avatar', avatarUrl)
                             localStorage.setItem('score', score)
                             // alert(avatarUrl)
+                            localStorage.setItem('userUid', uid)
                             history.push('/home')
                         })
                         .catch((error) => {
