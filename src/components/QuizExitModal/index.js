@@ -14,7 +14,7 @@ export default function QuizExitModal(props) {
     }
 
     function keepQuiz() {
-        props.startQuiz()
+        props.keepQuiz()
     }
 
     return (

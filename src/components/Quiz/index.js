@@ -1,5 +1,5 @@
 // Global
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import TopBar from '../TopBarPhase'
 import Questions from '../Questions'
@@ -16,6 +16,7 @@ export default function Quiz() {
     const color = localStorage.getItem('color')
     const nameUser = localStorage.getItem('nameUser')
     const [startQuiz, setStartQuiz] = useState(false)
+    const [handleKeepQuiz, setHandleKeepQuiz] = useState(true)
     const phaseId = localStorage.getItem('phaseId')
     const stageId = localStorage.getItem('stageId')
     const userUid = localStorage.getItem('userUid')
@@ -303,10 +304,22 @@ export default function Quiz() {
         }
     }
 
-    return (
-        <div className="containerStage">
+    function keepQuiz() {
+        setHandleKeepQuiz(true)
+    }
 
-            <QuizExitModal startQuiz={startQuizModal} exitQuiz={exitQuiz} />
+    function mouseOutQuiz() {
+        // const app = window.document.getElementById('App')
+        setHandleKeepQuiz(false)
+    }
+
+    return (
+        <div className="containerStage" onMouseLeave={mouseOutQuiz}>
+
+            {handleKeepQuiz === false && (
+                <QuizExitModal keepQuiz={keepQuiz} exitQuiz={exitQuiz} />
+            )}
+
 
             {startQuiz === false &&
                 (<QuizStartModal startQuiz={startQuizModal} cancelQuiz={cancelQuizModal} />)
