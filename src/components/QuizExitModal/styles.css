@@ -1,0 +1,101 @@
+.backgroundQuizStartModal {
+  /* background: rgba(89, 89, 89, 0.99); */
+  background: rgba(242, 243, 245, 0.8);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+}
+
+.backgroundQuizStartModal .containerQuizStartModal {
+  background: var(--white);
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  padding: 2rem 3rem;
+  border-radius: 5px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundQuizStartModal .containerQuizStartModal .containerHeader {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: var(--blue);
+  background-size: contain;
+  margin-bottom: 50px;
+}
+
+.backgroundQuizStartModal .containerQuizStartModal .containerHeader h2 {
+  margin-top: 20px;
+  color: var(--red);
+  font: 25px "Roboto", sans-serif;
+}
+
+.backgroundQuizStartModal .containerQuizStartModal .containerOptions {
+  display: flex;
+}
+
+.backgroundQuizStartModal .containerQuizStartModal .containerOptions button {
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  color: var(--white);
+  outline: 0;
+  border: 0;
+}
+
+.backgroundQuizStartModal
+  .containerQuizStartModal
+  .containerOptions
+  button
+  + button {
+  margin-left: 20px;
+}
+
+.backgroundQuizStartModal
+  .containerQuizStartModal
+  .containerOptions
+  .buttonStart {
+  background-color: var(--green-soft);
+}
+
+.backgroundQuizStartModal
+  .containerQuizStartModal
+  .containerOptions
+  .buttonClose {
+  background-color: var(--red);
+}
+
+/* .containerQuizStartModal strong {
+    font-size: 2.25rem;
+    color: var(--title);
+  }
+  
+  .containerQuizStartModal p {
+    font-size: 1.25rem;
+    color: var(--title);
+    margin-top: 1.25rem;
+  } */
+
+/* .containerQuizStartModal button {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    background: transparent;
+    border: 0;
+    font-size: 0px;
+  } */
