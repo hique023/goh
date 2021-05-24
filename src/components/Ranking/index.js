@@ -16,7 +16,7 @@ export default function Ranking() {
 
         const count = []
 
-        db.collection("score").get().then((querySnapshot) => {
+        db.collection("users").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 count.push(doc.data())
             });
@@ -53,7 +53,7 @@ export default function Ranking() {
 
             {score.data.map((item, key) => (
                 <div key={key}>
-                    <ListRanking name={'Heroi'} score={item.scoreTotal} />
+                    <ListRanking name={item.firstName} score={item.score} avatar={item.avatar} />
                 </div>
             ))}
 
