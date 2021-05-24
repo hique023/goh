@@ -9,23 +9,6 @@ import './styles.css'
 
 export default function Ranking() {
 
-    // const [posts] = useState([
-    //     {
-    //         id: 1,
-    //         title: 'Título 1',
-    //         body: 'body 1'
-    //     },
-    //     {
-    //         id: 2,
-    //         title: 'Título 2',
-    //         body: 'body 2'
-    //     },
-    //     {
-    //         id: 3,
-    //         title: 'Título 3',
-    //         body: 'body 3'
-    //     },
-    // ])
     const [score, setScore] = useState({ data: [] })
     const db = firebase.firestore();
 
@@ -40,26 +23,6 @@ export default function Ranking() {
 
             setScore({ data: count })
         })
-
-        // var docRef = db.collection('score').doc(key);
-        // var docRef = db.collection('score');
-
-        // await docRef.get().then((doc) => {
-        //     if (doc.exists) {
-        //         const data = doc.data()
-
-        //         setData(data)
-        //         console.log('====================================');
-        //         // console.log(doc.data());
-        //         console.log('====================================');
-
-        //     } else {
-        //         // doc.data() will be undefined in this case
-        //         console.log("No such document!");
-        //     }
-        // }).catch((error) => {
-        //     console.log("Error getting document:", error);
-        // })
 
     }
 

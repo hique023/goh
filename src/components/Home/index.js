@@ -228,6 +228,17 @@ export default function Home() {
                         console.log('Erro ao cadastrar score do usuário!')
                     });
 
+                db.collection("users").doc(userUid).set({
+                    score: scoreTotal,
+                }, { merge: true })
+                    .then((docRef) => {
+
+                    })
+                    .catch((error) => {
+                        // console.error("Error adding document: ", error);
+                        console.log('Erro ao cadastrar score do usuário na tabela Users!')
+                    });
+
             } else {
                 // doc.data() will be undefined in this case
                 console.log("No such document!");
