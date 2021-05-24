@@ -5,16 +5,16 @@ import React from 'react'
 import './styles.css'
 import image from '../../assets/backgroundregister.png'
 
-export default function ListRanking() {
+export default function ListRanking({ score, name }) {
     return (
         <div className="containerListRanking">
 
             <div className="containerListRankingLeft">
                 <img src={image} alt="Avatar" />
-                <h1>Heroi</h1>
+                <h1>{name}</h1>
             </div>
             <div className="containerListRankingRight">
-                <h1>850px</h1>
+                <h1>{score} px</h1>
             </div>
         </div>
     )
