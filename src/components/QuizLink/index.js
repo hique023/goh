@@ -40,9 +40,15 @@ export default function QuizLink(props) {
                         )}
 
                         {props.statusQuiz === false ? (
-                            <h1>{props.name} Pendente</h1>
+                            <div>
+                                <h1>{props.name}</h1>
+                                <h1>(Pendente)</h1>
+                            </div>
                         ) : (
-                            <h1>{props.name} Respondido</h1>
+                            <div>
+                                <h1>{props.name}</h1>
+                                <h1>(Respondido)</h1>
+                            </div>
                         )}
 
                     </div>

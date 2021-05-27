@@ -313,6 +313,12 @@ export default function Quiz() {
         setHandleKeepQuiz(false)
     }
 
+    useEffect(() => {
+        // window.location.hash = "no-back-button"
+        // window.location.hash = "Again-No-back-button"
+        // window.onhashchange = function () { window.location.hash = "no-back-button" }
+    }, [])
+
     return (
         <div className="containerStage" onMouseLeave={mouseOutQuiz}>
 

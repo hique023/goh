@@ -23,7 +23,6 @@ export default function Ranking() {
 
             setScore({ data: count })
         })
-
     }
 
     useEffect(() => {
