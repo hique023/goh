@@ -21,6 +21,15 @@ export default function Ranking() {
                 count.push(doc.data())
             });
 
+
+            count.sort(function (a, b) {
+                if (a.score > b.score) {
+                    return -1
+                } else {
+                    return true
+                }
+            })
+
             setScore({ data: count })
         })
     }
