@@ -340,7 +340,7 @@ export default function Timer() {
 
   function getDeadlineTime() {
     let deadline = new Date();
-    deadline.setSeconds(deadline.getSeconds() + 10);
+    deadline.setSeconds(deadline.getSeconds() + 600);
     return deadline;
   }
 
