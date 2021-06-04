@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "gohglobal",
     "public": "build",
     "ignore": [
       "firebase.json",
