@@ -328,6 +328,11 @@ export default function Quiz() {
     setHandleKeepQuiz(false);
   }
 
+  window.onload = function loadedPage() {
+    alert("Você recarregou a página, perderá a chance de continuar no quiz!");
+    history.goBack();
+  };
+
   useEffect(() => {
     // window.location.hash = "no-back-button"
     // window.location.hash = "Again-No-back-button"
