@@ -6,6 +6,7 @@ import Questions from "../Questions";
 import Timer from "../Timer";
 import QuizStartModal from "../QuizStartModal";
 import QuizExitModal from "../QuizExitModal";
+import PageReloadModal from "../PageReloadedModal";
 import firebase from "../../firebaseConfig.js";
 
 // Assets
@@ -16,6 +17,7 @@ export default function Quiz() {
   const nameUser = localStorage.getItem("nameUser");
   const [startQuiz, setStartQuiz] = useState(false);
   const [handleKeepQuiz, setHandleKeepQuiz] = useState(true);
+  const [realoadPage, setRealoadPage] = useState(false);
   const phaseId = localStorage.getItem("phaseId");
   const stageId = localStorage.getItem("stageId");
   const userUid = localStorage.getItem("userUid");
@@ -329,8 +331,8 @@ export default function Quiz() {
   }
 
   window.onload = function loadedPage() {
-    alert("Você recarregou a página, perderá a chance de continuar no quiz!");
-    history.goBack();
+    setRealoadPage(true);
+    console.log(realoadPage);
   };
 
   useEffect(() => {
@@ -341,18 +343,14 @@ export default function Quiz() {
 
   return (
     <div className="containerStage" onMouseLeave={mouseOutQuiz}>
-      {handleKeepQuiz === false && (
-        <QuizExitModal keepQuiz={keepQuiz} exitQuiz={exitQuiz} />
-      )}
-
-      {startQuiz === false && (
+      {realoadPage === true ? (
+        <PageReloadModal />
+      ) : startQuiz === false ? (
         <QuizStartModal
           startQuiz={startQuizModal}
           cancelQuiz={cancelQuizModal}
         />
-      )}
-
-      {startQuiz === true && (
+      ) : (
         <div>
           <TopBar name={`Olá, ${nameUser}`} color={color} quiz={true} />
 
@@ -364,6 +362,10 @@ export default function Quiz() {
             <Questions />
           </div>
         </div>
+      )}
+
+      {handleKeepQuiz === false && (
+        <QuizExitModal keepQuiz={keepQuiz} exitQuiz={exitQuiz} />
       )}
     </div>
   );
