@@ -23,6 +23,7 @@ export default function Stage() {
   const phaseId = localStorage.getItem("phaseId");
   const stageId = localStorage.getItem("stageId");
   const userUid = localStorage.getItem("userUid");
+  const startedQuiz = localStorage.getItem("startQuiz");
   const db = firebase.firestore();
 
   async function getScore() {
@@ -1035,8 +1036,309 @@ export default function Stage() {
       });
   }
 
+  function statusQuiz() {
+    if (phaseId === "fase1") {
+      if (stageId === "etapa1" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase1: {
+                etapa1: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa2" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase1: {
+                etapa2: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa3" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase1: {
+                etapa3: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa4" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase1: {
+                etapa4: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      }
+    } else if (phaseId === "fase2") {
+      if (stageId === "etapa1" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase2: {
+                etapa1: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa2" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase2: {
+                etapa2: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa3" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase2: {
+                etapa3: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa4" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase2: {
+                etapa4: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      }
+    } else if (phaseId === "fase3") {
+      if (stageId === "etapa1" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase3: {
+                etapa1: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa2" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase3: {
+                etapa2: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa3" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase3: {
+                etapa3: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa4" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase3: {
+                etapa4: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      }
+    } else if (phaseId === "fase4") {
+      if (stageId === "etapa1" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase4: {
+                etapa1: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa2" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase4: {
+                etapa2: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa3" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase4: {
+                etapa3: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      } else if (stageId === "etapa4" && startedQuiz === "true") {
+        localStorage.setItem("startQuiz", false);
+        db.collection("quizFinish")
+          .doc(userUid)
+          .set(
+            {
+              // scoreTotal: score,
+              fase4: {
+                etapa4: true,
+              },
+            },
+            { merge: true }
+          )
+          .then((docRef) => {})
+          .catch((error) => {
+            // console.error("Error adding document: ", error);
+            console.log("Erro ao cadastrar status do quiz do usuário!");
+          });
+      }
+    }
+  }
+
   useEffect(() => {
     getScore();
+    statusQuiz();
   }, []);
 
   return (
