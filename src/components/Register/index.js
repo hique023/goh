@@ -20,11 +20,16 @@ export default function Register() {
   );
   const [avatarUrl, setAvatarUrl] = useState("");
   const [score, setScore] = useState(0);
+  const [submitButton, setSubmitButton] = useState(true);
   const dominio = email.split("@");
   const dominioValidator = "cappta.com.br";
   const db = firebase.firestore();
   // const [userUid, setUserUid] = useState('')
   // const storage = firebase.storage();
+
+  function validator() {
+    console.log("Clicou!");
+  }
 
   function handleRegister(e) {
     e.preventDefault();
@@ -285,6 +290,7 @@ export default function Register() {
           //   console.log(`Upload do avatar ${file.name}.`);
           await setAvatarUrl(await fileRef.getDownloadURL());
           //   console.log(avatarUrl);
+          setSubmitButton(false);
         });
       }
     };
@@ -372,7 +378,7 @@ export default function Register() {
               </select>
             </div>
 
-            <button className="button" type="submit">
+            <button className="button" type="submit" disabled={submitButton}>
               Cadastrar
             </button>
           </form>
