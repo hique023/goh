@@ -5,6 +5,7 @@ import firebase from "../../firebaseConfig.js";
 
 // Assets
 import { FiArrowLeft } from "react-icons/fi";
+import uploadAvatar from "../../assets/uploadAvatar.png";
 
 // Style
 import "./styles.css";
@@ -15,9 +16,7 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [group, setGroup] = useState("");
-  const [profileImg, setProfileImg] = useState(
-    "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-  );
+  const [profileImg, setProfileImg] = useState(uploadAvatar);
   const [avatarUrl, setAvatarUrl] = useState("");
   const [score, setScore] = useState(0);
   const [submitButton, setSubmitButton] = useState(true);
