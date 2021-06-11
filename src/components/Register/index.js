@@ -14,7 +14,7 @@ export default function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [group, setGroup] = useState("RC");
+  const [group, setGroup] = useState("");
   const [profileImg, setProfileImg] = useState(
     "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
   );
@@ -378,9 +378,20 @@ export default function Register() {
               </select>
             </div>
 
-            <button className="button" type="submit" disabled={submitButton}>
-              Cadastrar
-            </button>
+            {submitButton === true ? (
+              <button
+                className="button"
+                type="submit"
+                disabled={submitButton}
+                style={{ backgroundColor: "var(--block)" }}
+              >
+                Avatar Pendente
+              </button>
+            ) : (
+              <button className="button" type="submit" disabled={submitButton}>
+                Cadastrar
+              </button>
+            )}
           </form>
         </div>
       </div>
