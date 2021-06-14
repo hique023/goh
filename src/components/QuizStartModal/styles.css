@@ -69,14 +69,14 @@
 .backgroundQuizStartModal
   .containerQuizStartModal
   .containerOptions
-  .buttonStart {
+  .buttonStartQuiz {
   background-color: var(--green-soft);
 }
 
 .backgroundQuizStartModal
   .containerQuizStartModal
   .containerOptions
-  .buttonClose {
+  .buttonCloseQuiz {
   background-color: var(--red);
 }
 
