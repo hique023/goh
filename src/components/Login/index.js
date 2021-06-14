@@ -16,11 +16,13 @@ export default function Logon() {
   // const dominio = email.split('@')
   // const dominioValidator = 'cappta.com.br'
   const db = firebase.firestore();
+  // const [emailPassword] = useState("email@email.com.br");
 
   const history = useHistory();
 
   useEffect(() => {
     setEmail(localStorage.getItem("email"));
+    // redefinePassword();
   }, []);
 
   async function handleLogin(e) {
@@ -94,6 +96,19 @@ export default function Logon() {
     //     alert('Insira seu email corporativo')
     // }
   }
+
+  // function redefinePassword() {
+  //   firebase
+  //     .auth()
+  //     .sendPasswordResetEmail(emailPassword)
+  //     .then(function () {
+  //       // Email sent.
+  //       console.log("Redefição de senha enviada!");
+  //     })
+  //     .catch(function (error) {
+  //       // An error happened.
+  //     });
+  // }
 
   return (
     <div className="container-master">

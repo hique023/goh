@@ -303,16 +303,20 @@ export default function Register() {
           <section>
             <h1>Cadastro</h1>
             <p>
-              Faça seu cadastro, entre na plataforma e aproveite o que temos a
-              oferecer!
+              <b>
+                Faça seu cadastro, entre na plataforma e aproveite o que temos a
+                oferecer!
+              </b>
             </p>
 
             <p className="atentionInputs">
-              Todos os campos são obrigatórios para realizar o cadastro,
-              incluindo a foto do heroi!
+              <b>
+                Todos os campos são obrigatórios para realizar o cadastro,
+                incluindo a foto do heroi!
+              </b>
             </p>
             <p className="atentionPassword">
-              A senha deve conter no mínimo 6 caracteres.
+              <b>A senha deve conter no mínimo 6 caracteres.</b>
             </p>
 
             <Link className="back-link" to="/">

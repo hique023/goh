@@ -70,7 +70,7 @@
   .containerQuizStartModal
   .containerOptions
   .buttonStart {
-  background-color: var(--red);
+  background-color: var(--exitQuix);
 }
 
 .backgroundQuizStartModal
