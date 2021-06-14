@@ -342,7 +342,7 @@ export default function Quiz() {
   }, []);
 
   return (
-    <div className="containerStage" onMouseLeave={mouseOutQuiz}>
+    <div className="containerStageQuiz" onMouseLeave={mouseOutQuiz}>
       {realoadPage === true ? (
         <PageReloadModal />
       ) : startQuiz === false ? (
