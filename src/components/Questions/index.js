@@ -3547,7 +3547,9 @@ export default function Questions() {
             }}
           />
 
-          <label htmlFor="answer1">{answer1}</label>
+          <b>
+            <label htmlFor="answer1">{answer1}</label>
+          </b>
         </div>
         <div>
           <input
@@ -3560,7 +3562,9 @@ export default function Questions() {
             }}
           />
 
-          <label htmlFor="answer2">{answer2}</label>
+          <b>
+            <label htmlFor="answer2">{answer2}</label>
+          </b>
         </div>
         <div>
           <input
@@ -3573,7 +3577,9 @@ export default function Questions() {
             }}
           />
 
-          <label htmlFor="answer3">{answer3}</label>
+          <b>
+            <label htmlFor="answer3">{answer3}</label>
+          </b>
         </div>
         <div>
           <input
@@ -3586,11 +3592,15 @@ export default function Questions() {
             }}
           />
 
-          <label htmlFor="answer4">{answer4}</label>
+          <b>
+            <label htmlFor="answer4">{answer4}</label>
+          </b>
         </div>
       </div>
 
-      <h3>Resposta selecionada: {answerSelected}</h3>
+      <b>
+        <h3>Resposta selecionada: {answerSelected}</h3>
+      </b>
 
       {count < 10 ? (
         <div className="buttonsQuestions">
