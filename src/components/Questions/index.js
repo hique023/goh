@@ -20,6 +20,17 @@ export default function Questions() {
   const [count, setCount] = useState(1);
   const [score, setScore] = useState(0);
 
+  // const [answerDb1, setAnswerDb1] = useState("");
+  // const [answerDb2, setAnswerDb2] = useState("");
+  // const [answerDb3, setAnswerDb3] = useState("");
+  // const [answerDb4, setAnswerDb4] = useState("");
+  // const [answerDb5, setAnswerDb5] = useState("");
+  // const [answerDb6, setAnswerDb6] = useState("");
+  // const [answerDb7, setAnswerDb7] = useState("");
+  // const [answerDb8, setAnswerDb8] = useState("");
+  // const [answerDb9, setAnswerDb9] = useState("");
+  // const [answerDb10, setAnswerDb10] = useState("");
+
   const color = localStorage.getItem("color");
   const phaseId = localStorage.getItem("phaseId");
   const stageId = localStorage.getItem("stageId");
@@ -35,8 +46,3090 @@ export default function Questions() {
     if (answerSelected != null) {
       setCount(count + 1);
       setAnswerSelected(null);
-      // console.log(count);
+      console.log(count);
       clearRadio();
+
+      if (phaseId === "fase1") {
+        if (stageId === "etapa1") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa1: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa1: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa1: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa1: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa1: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa1: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa1: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa1: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa1: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa1: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa2") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa2: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa2: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa2: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa2: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa2: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa2: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa2: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa2: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa2: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa2: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa3") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa3: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa3: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa3: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa3: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa3: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa3: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa3: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa3: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa3: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa3: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa4") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa4: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa4: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa4: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa4: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa4: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa4: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa4: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa4: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa4: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase1: {
+                    etapa4: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        }
+      } else if (phaseId === "fase2") {
+        if (stageId === "etapa1") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa1: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa1: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa1: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa1: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa1: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa1: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa1: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa1: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa1: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa1: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa2") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa2: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa2: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa2: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa2: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa2: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa2: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa2: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa2: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa2: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa2: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa3") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa3: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa3: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa3: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa3: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa3: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa3: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa3: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa3: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa3: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa3: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa4") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa4: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa4: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa4: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa4: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa4: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa4: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa4: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa4: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa4: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase2: {
+                    etapa4: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        }
+      } else if (phaseId === "fase3") {
+        if (stageId === "etapa1") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa1: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa1: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa1: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa1: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa1: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa1: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa1: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa1: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa1: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa1: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa2") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa2: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa2: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa2: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa2: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa2: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa2: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa2: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa2: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa2: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa2: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa3") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa3: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa3: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa3: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa3: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa3: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa3: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa3: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa3: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa3: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa3: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa4") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa4: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa4: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa4: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa4: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa4: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa4: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa4: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa4: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa4: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase3: {
+                    etapa4: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        }
+      } else if (phaseId === "fase4") {
+        if (stageId === "etapa1") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa1: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa1: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa1: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa1: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa1: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa1: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa1: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa1: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa1: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa1: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa2") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa2: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa2: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa2: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa2: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa2: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa2: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa2: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa2: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa2: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa2: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa3") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa3: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa3: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa3: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa3: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa3: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa3: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa3: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa3: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa3: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa3: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        } else if (stageId === "etapa4") {
+          if (count === 1) {
+            const localAnswerDb1 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa4: {
+                      1: localAnswerDb1,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 2) {
+            const localAnswerDb2 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa4: {
+                      2: localAnswerDb2,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 3) {
+            const localAnswerDb3 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa4: {
+                      3: localAnswerDb3,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 4) {
+            const localAnswerDb4 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa4: {
+                      4: localAnswerDb4,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 5) {
+            const localAnswerDb5 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa4: {
+                      5: localAnswerDb5,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 6) {
+            const localAnswerDb6 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa4: {
+                      6: localAnswerDb6,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 7) {
+            const localAnswerDb7 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa4: {
+                      7: localAnswerDb7,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 8) {
+            const localAnswerDb8 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa4: {
+                      8: localAnswerDb8,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 9) {
+            const localAnswerDb9 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa4: {
+                      9: localAnswerDb9,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          } else if (count === 10) {
+            const localAnswerDb10 = answerSelected;
+            db.collection("answers")
+              .doc(uid)
+              .set(
+                {
+                  fase4: {
+                    etapa4: {
+                      10: localAnswerDb10,
+                    },
+                  },
+                },
+                { merge: true }
+              )
+              .then((docRef) => {})
+              .catch((error) => {
+                // console.error("Error adding document: ", error);
+                console.log("Erro ao cadastrar resposta do usuário!");
+              });
+          }
+        }
+      }
 
       if (answerSelected === correctAnswer) {
         setScore(score + questionDifficulty);
